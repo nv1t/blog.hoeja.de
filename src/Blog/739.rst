@@ -1,0 +1,26 @@
+Komprimiere die Datei
+#####################
+:date: 2011-11-29 05:48
+:tags: de, php
+
+Der bisherige Ansatz eine komprimierte Datei zu schreiben war die Datei
+zu schreiben und dann zu komprimieren. Wie ich heute aber erfahren hab,
+laesst sich auch gleich in eine komprimierte Datei schreiben. Seit PHP
+Streams unterstuetzt ist damit allerhand moeglich. Ob nun Zugriff auf
+ftp mit Passwoertern, oder ssl verschluesselte Seiten. Alles ist
+moeglich geworden! So unterstuetzt PHP nun auch das schreiben in
+komprimierte Dateien:
+
+::
+
+    $fp = fopen("compress.zlib://foo-bar.txt.gz", "wb");
+    if (!$fp) die("Unable to create file.");
+    fwrite($fp, "This is a test.\n");
+    fclose($fp);
+
+Die Datei kann natuerlich auch wieder damit ausgelesen werden.
+Natuerlich kann man sich fuer Streams seine eigenen Wrapper schreiben
+und ich frage mich gerade, ob schonmal dran gedacht wurde MySQL Zugriff
+auf Wrapper Basis zu schreiben? Es gibt wrapper fuer rar, ssh2, glob,
+sogar ogg kann gelesen und geschrieben werden. Mal sehen, was da noch
+rauszuholen ist. so long
