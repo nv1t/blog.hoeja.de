@@ -11,9 +11,10 @@ Dieser Vortrag ist auch oeffentlich als Video zugaenglich: `->hier`_
 Alles in allem war die SIGINT ein positives Erlebnis. Alle recht nett, viele Leute kennengelernt. Die Location war wirklich
 Klasse. Mal sehen ob ich naechstes Jahr als normaler Besucher gehe.
 
-Leider konnte ich den Vortrag, auf den ich mich im Nachhinein nicht schauen, weil der Ton fehlt, da die Mikrofone ausgefallen sind.
+Leider konnte ich den einzigen Vortrag, auf den ich mich im Nachheinein gefreut hatte, nicht schauen, weil die Mikrofone ausgefallen sind.
+Dadurch ist kein Ton im Video vorhanden, leider.
 
-Ohne die Sigint haette ich wohl nie den Kontakt zu FoeBuD gefunden. Bin begeistert, dass sie da waren und bin begeistert, dass 
+Ohne die Sigint haette ich wohl zudem nie den Kontakt zu FoeBuD gefunden. Bin begeistert, dass sie da waren und bin begeistert, dass 
 sie so eine Unterstuetzung sind. Vielen Dank dafuer.
 
 Geniesst den Vortrag und hoffentlich seh ich ein paar Leute auf der MRMCD :)
