@@ -10,7 +10,7 @@ ein iframe gewesen, welches die Weiterleitung klar verursachte.
 Aber was genau war passiert...
 
 Die Wordpress Version war/ist auf dem neusten Stand, also vermutet ich erstmal einen 0-day.
-Bevor man sich aber darum kuemmern kann, sollte man erstmal die Seite wieder laeuffaehig kriegen.
+Bevor man sich aber darum kuemmern kann, sollte man erstmal die Seite wieder laeuffaehig machen.
 Backup ist wohl der erste Gedanke. Doch auch ein einspielen des Themes brachte keiner Linderung
 der Probleme. 
 
@@ -18,7 +18,10 @@ Folgerung: das Copyright wird wohl in der Datenbank oder im Theme abgespeichert 
 Nachdem man nichts ueber dieses iframe gefunden hat (auch ein grep auf alle Dateien machte es nicht sichtbar) war guter Rat
 teuer.
 
-Ich entdeckte in einer Datei des Themes interessante Strukturen ala:
+Nachdem man nichts ueber dieses iframe gefunden hat (auch ein grep auf alle Dateien machte es nicht sichtbar) war guter Rat
+teuer.
+
+ich entdeckte in einer Datei des Themes interessante Strukturen ala:
 
  .. code-block :: php
 
