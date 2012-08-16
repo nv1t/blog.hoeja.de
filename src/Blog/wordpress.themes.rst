@@ -10,17 +10,15 @@ ein iframe gewesen, welches die Weiterleitung klar verursachte.
 Aber was genau war passiert...
 
 Die Wordpress Version war/ist auf dem neusten Stand, also vermutet ich erstmal einen 0-day.
-Bevor man sich aber darum kuemmern kann, sollte man erstmal die Seite wieder laeuffaehig machen.
-
+Bevor man sich aber darum kuemmern kann, sollte man erstmal die Seite wieder laeuffaehig kriegen.
 Backup ist wohl der erste Gedanke. Doch auch ein einspielen des Themes brachte keiner Linderung
 der Probleme. 
 
 Folgerung: das Copyright wird wohl in der Datenbank oder im Theme abgespeichert (Ich kenne Wordpress vom Aufbau leider nicht so gut...)
-
 Nachdem man nichts ueber dieses iframe gefunden hat (auch ein grep auf alle Dateien machte es nicht sichtbar) war guter Rat
 teuer.
 
-ich entdeckte in einer Datei des Themes interessante Strukturen ala:
+Ich entdeckte in einer Datei des Themes interessante Strukturen ala:
 
  .. code-block :: php
 
@@ -99,9 +97,7 @@ Aber das ist noch nichtmal das schlimme, sondern die paar Zeilen inklusive der K
 
 Also phpsh angeworfen um mal zu sehen, was da ueberhaupt drin steht.
 Es ist wirklich eine call url.
-
 Zudem ist hier auch noch ein Art Cache implementiert, die die XML Datei cachen soll. 
-
 Solangsam werd ich neugierig, was das fuer eine XML Datei sein soll.
 
  .. code-block :: xml
