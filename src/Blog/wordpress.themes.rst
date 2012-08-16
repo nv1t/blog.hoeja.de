@@ -4,30 +4,35 @@ Wordpress-Theme Horror!
 :tags: de, php, wordpress
 
 Vor ein paar Tagen ist auf einer Wordpress Seite einer Freundin etwas seltsames passiert.
-Die Seite kam rueber als waere sie gehackt wurde, auch ist im Footer (genauer gesagt im Copyright)
+Die Seite tat so als waere sie gehackt wurde. Auch ist im Footer (genauer gesagt im Copyright)
 ein iframe gewesen, welches die Weiterleitung klar verursachte.
+
 Aber was genau war passiert...
-Die Wordpress Version war/ist auf dem neusten Stand, also wurde erstmal ein 0-day Vermutet.
+
+Die Wordpress Version war/ist auf dem neusten Stand, also vermutet ich erstmal einen 0-day.
 Bevor man sich aber darum kuemmern kann, sollte man erstmal die Seite wieder laeuffaehig machen.
+
 Backup ist wohl der erste Gedanke. Doch auch ein einspielen des Themes brachte keiner Linderung
 der Probleme. 
 
-Also wird das Copyright wohl in der Datenbank abgespeichert (Ich kenne Wordpress vom Aufbau leider nicht so gut...)
+Folgerung: das Copyright wird wohl in der Datenbank oder im Theme abgespeichert (Ich kenne Wordpress vom Aufbau leider nicht so gut...)
 
 Nachdem man nichts ueber dieses iframe gefunden hat (auch ein grep auf alle Dateien machte es nicht sichtbar) war guter Rat
 teuer.
 
-Dann entdeckte ich in einer Datei des Themes interessante Strukturen ala:
+ich entdeckte in einer Datei des Themes interessante Strukturen ala:
 
  .. code-block :: php
 
 	eval(gzinflate(base64_decode(....));
 
-Das machte mich stutzig und ich wunderte mich, dass jemand soweit gehen wuerde es direkt in das Theme zu schreiben.
-Nachdem wir ja ein Backup des Themes aufgespielt haben, muss es wohl schon vorher drin gewesen sein. Aber wer bitte 
-"verschluesselt" seine Sachen.
-Noch Mysterioeser wurde es, als ich das nicht direkt decodieren koennte, sondern an die 20 Durchlaeufe brauchte.
-Zum Glueck kann ich bashen, was mir das Leben ein wenig erleichterte
+Das machte mich stutzig und ich wunderte mich, dass jemand soweit gehen wuerde den Hack direkt in das Theme zu schreiben.
+
+Nachdem wir ja ein Backup des Themes aufgespielt hatten, muss es wohl schon vorher drin gewesen sein. 
+
+Aber wer bitte "verschluesselt" seine Sachen.
+Noch Mysterioeser wurde es, als ich das nicht direkt decodieren konnte, sondern an die 20 Durchlaeufe brauchte.
+Zum Glueck kann ich Zashen, was mir das Leben ein wenig erleichterte
 
  .. code-block :: bash
 
@@ -44,10 +49,11 @@ Zum Glueck kann ich bashen, was mir das Leben ein wenig erleichterte
 		read
 	done;
 
-Dadurch krieg ich alle Zwischenversionen und ich seh gleich, wenn es decodiert ist.
+Das kleine Script liefert mir alle Zwischenversionen und ich seh gleich, wenn es decodiert ist.
 
 Interessanterweise hatten alle Verschluesselten Abschnitte mit dem Copyright zu tun.
-Mal abgesehen von seltsamen Abschnitten die Zwingend das Copyright in der footer.php wollen:
+Mal abgesehen von seltsamen Abschnitten die zwingend das Copyright in der footer.php wollen, und auch bereit
+waren es selbstaendig einzutragen, sollte es fehlen,
 
  .. code-block :: php
 
@@ -69,7 +75,7 @@ Mal abgesehen von seltsamen Abschnitten die Zwingend das Copyright in der footer
 
 sind die meisten Abschnitte relativ harmlos und waren auch "nur" ein eval(base64_decode(...));
 
-Doch es gab einen Abschnitt der mich schon ein wenig stutzig gemacht hat.
+Doch es gab einen Abschnitt der mich schon ein wenig stutzig machte.
 Man muss dazu sagen, dass der Abschnitt ueber eine etliche Laenge geht, aber nur eine einzige Zeile enthaelt:
 
  .. code-block :: php
@@ -94,8 +100,9 @@ Aber das ist noch nichtmal das schlimme, sondern die paar Zeilen inklusive der K
 Also phpsh angeworfen um mal zu sehen, was da ueberhaupt drin steht.
 Es ist wirklich eine call url.
 
-Zudem ist hier auch noch ein Cache implementiert, die die xml Datei cachen soll. Solangsam werd ich neugierig, was das fuer eine
-XML Datei sein soll.
+Zudem ist hier auch noch ein Art Cache implementiert, die die XML Datei cachen soll. 
+
+Solangsam werd ich neugierig, was das fuer eine XML Datei sein soll.
 
  .. code-block :: xml
 
@@ -106,7 +113,7 @@ XML Datei sein soll.
 		</site>
 	</data>
 
-Wow...ich habe meinen Iframe gefunden! Aber warum wird der gecached, wo kommt er her, und was passiert ueberhaupt alles.
+Wow...ich habe meinen iframe gefunden! Aber warum wird der gecached, wo kommt er her, und was passiert ueberhaupt alles.
 Anscheinend macht das Theme einen RemoteCall zu einem Server und laedt sich eine XML Datei, bzw. einen Content, den er einbinden muss.
 
 Es gibt auch lustigerweise noch einen "checkValid()" Funktion, die einen String zusammenbaut, der dann an einen RemoteServer geschickt wird.
@@ -117,7 +124,7 @@ Also starte ich auf meinem Testserver ein tcpdump um die Meldungen exakt mitzulo
 .. image:: http://images.hoeja.de/blog/wiresharkdump.png
 	:width: 800px
 
-Es wird also ein GET Request aufgerufen, der einen base64 Encodierten Datensatz uebertraegen. (wer haette es gedacht...)
+Es wird also ein GET Request aufgerufen, der einen base64 Encodierten Datensatz uebertraegt. (wer haette es gedacht...)
 Die Uebertragung geht an shayup.com. Ein whois loest auf, wer da wohl dahintersteht:
 
 ::
@@ -131,7 +138,7 @@ Die Uebertragung geht an shayup.com. Ein whois loest auf, wer da wohl dahinterst
 	Tan Binh, P 70000
 	VN
 
-Es existiert von diesem svery nicht nur eine Adresse in China, sondern auch eien in Israel und sicher noch etliche andere.
+Es existiert von diesem svery nicht nur eine Adresse in China, sondern auch eine in Israel und sicher noch etliche andere.
 
 Aber die Frage ist, was wohl wirklich uebertragen wird:
 
@@ -144,6 +151,6 @@ Zum Glueck werden keine weiteren Daten uebertragen, so schaut es zumindest aus.
 
 Aber selbst das ist schon schlimm genug!
 
-Und was bleibt mir dazu als Fazit zu sagen? Fremde Themes nehmen ist boese. Ich werde deutlich mehr aufpassen, was ich nehme und wo ich es einsetze. Es koennten auch Passwoerter uebertragen werden, oder andere Dateien. Man laedt fremden SourceCode auf seine Seite!
+Und was bleibt mir dazu als Fazit zu sagen? Fremde Themes nehmen ist boese. Ich werde deutlich mehr aufpassen, was ich nehme und wo ich es einsetze. Es koennten auch Passwoerter uebertragen werden, oder andere Dateien. Man sollte sich immer vor Augen halten, dass man mit Themes fremden SourceCode auf seine Seite laedt. Sollten hier sensitive Daten sein, das Theme nochmal durchschauen!
 
 so long
