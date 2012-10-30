@@ -20,7 +20,7 @@ least 2 persons have on the same day. Because it's kinda frustrating to
 calculate this fraction with a calculater i wrote a small python script
 :)
 
-::
+.. code-block :: python
 
     n=25 # number of persons
     ret=1
@@ -46,7 +46,7 @@ everybody has on a different day. So we get: $P = 1-\\frac{u}{m} =
 1-\\frac{(365y)!}{(365y-n)! \\cdot (365 \\cdot y)^n}$ which is the
 possibility at least 2 persons have on the same day and same year.
 
-::
+.. code-block :: python
 
     n=50 # number of persons
     y=25 # range of years

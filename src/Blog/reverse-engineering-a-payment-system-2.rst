@@ -4,6 +4,8 @@ Reverse Engineering a Payment System #2
 :tags: en, nfc, numerics, payment system, reverse engineering, rfid
 
 i prepared two different card outputs (just excerpts) to compare them.
+The first card is a guestcard, which you can buy without beeing registered in the system. The part i left out, is a not encrypted and empty sector which is totaly unimportant.
+The card has the UID: aa257c3c which are the first bytes of the card.
 
 ::
 
@@ -24,9 +26,10 @@ i prepared two different card outputs (just excerpts) to compare them.
     0000110: f149 b30c 3871 5bc8 260b 79be 2972 37c7  .I..8q[.&.y.)r7.
     0000120: c649 ed85 f4fc c130 0000 0000 0000 0000  .I.....0........
     0000130: 6151 e071 3c82 7f07 8869 483c 5321 e6f5  aQ.q<....iH
-    The first card is a guestcard, which you can buy without beeing registered in the system. The part i left out, is a not encrypted and empty sector which is totaly unimportant. 
-    The card has the UID: aa257c3c which are the first bytes of the card. 
-    I want to explain the second card, and after that i'm going to talk about the structur of the backup files and their format.
+
+I want to explain the second card, and after that i'm going to talk about the structur of the backup files and their format.
+
+::
 
     0000000: 4dfb fd2b 6088 0400 46ba 1456 6150 1810  M..+`...F..VaP..
     0000010: 3202 0000 0138 0138 0138 0000 0000 0000  2....8.8.8......
@@ -45,15 +48,18 @@ i prepared two different card outputs (just excerpts) to compare them.
     0000110: 737d b70c 3961 0fe0 260b 79be 2972 37c7  s}..9a..&.y.)r7.
     0000120: c649 ed85 f4fc c130 0000 0000 0000 0000  .I.....0........
     0000130: 6151 e071 3c82 7f07 8869 483c 5321 e6f5  aQ.q<....iH
-    The second card is a normal user card. It has  the id: 4dfbfd2b.
-    it's one of my marked cards, so it has sector 2 [A] encrypted. The sector seams unimportant for the structur and usage of the card, despite of the data written in sector 02 [A]
 
-    I want to explain the binary file and what the hex-numbers mean. In fact, i can only guess, whats everything. I'm not quite sure yet.
-    The first sector, sector 00, is not encrypted, it is not writable by hardware and has therefore no encryption key. 
-    The first 4 bytes form the UID of the card. The rest i'm not quite sure about it myself. I would bet on some kind of: manufacturer, time, and so on.
-    The sector 01 is completly empty and not used on this type of system therefore i left it out.
-    A sector consists of 48 bytes. Each sector is divided into type [A] and [B]. Every type has 24 bytes to write in. Every sector and even every type has their own encryption key based on 6 bytes.
-    It is written as:
+The second card is a normal user card. It has  the id: 4dfbfd2b.
+it's one of my marked cards, so it has sector 2 [A] encrypted. The sector seams unimportant for the structur and usage of the card, despite of the data written in sector 02 [A]
+
+I want to explain the binary file and what the hex-numbers mean. In fact, i can only guess, whats everything. I'm not quite sure yet.
+The first sector, sector 00, is not encrypted, it is not writable by hardware and has therefore no encryption key. 
+The first 4 bytes form the UID of the card. The rest i'm not quite sure about it myself. I would bet on some kind of: manufacturer, time, and so on.
+The sector 01 is completly empty and not used on this type of system therefore i left it out.
+A sector consists of 48 bytes. Each sector is divided into type [A] and [B]. Every type has 24 bytes to write in. Every sector and even every type has their own encryption key based on 6 bytes.
+It is written as:
+
+::
 
     00000b0: keyA fourDividerBytes keyB
     00000c0: DataA                 DataB

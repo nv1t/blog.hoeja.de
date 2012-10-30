@@ -170,7 +170,7 @@ auf den Rechnern/Servern von Spinetix, demnach unerreichbar. so long
 
 .. _spinetix hmp130: http://www.spinetix.com/hmp130/specifications
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-192947_432x284_scrot-300x197.png
+.. |image0| image:: http://images.hoeja.de/blog/2012-09-13-144408_403x263_scrot.png
 .. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4089-300x199.jpg
 .. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4091-300x199.jpg
 .. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-191423_585x183_scrot-300x93.png

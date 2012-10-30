@@ -1,4 +1,4 @@
-&quot;I&#039;m afraid&quot; by Shaina Feinberg
+I'm afraid by Shaina Feinberg
 ##############################################
 :date: 2012-02-22 19:21
 :tags: en, leben, poetry
@@ -18,7 +18,7 @@ I was afraid to rip or cut it
 open. The seam is really neat and i didn't want to destroy it. But in
 the end, my curiosity won big time! And i was even more impressed in
 what i found inside. There were 75 cards of the size 8.5x4.7cm. All of
-them had the page number and nearly all of them some text on it. You can
+them had a page number and nearly all of them some text on it. You can
 say it is a book. 
 
 |image1|
@@ -72,14 +72,14 @@ present, but it wasn't handcrafted by any girlfriend. I discovered it
 was written and sewn together by `Shaina Feinberg (www.f-berg.org)`_.
 She told me, she stopped making them about 6 years ago. My brother never
 went to America, he never visited New York. Where the hack did he get
-this from? Probably i will ask him later. After the bonus where 8 empty
+this from? Probably i will ask him later. The bonus were 8 empty
 cards. So i finish what she intended to start:
 
-    i'm afraid i'm afraid of not beeing recognised or simply
+    i'm afraid, i'm afraid of not beeing recognised or simply
     categorized. i'm afraid of shattering doors in the storm of heat, of
-    built up anger which comes out, and things which should never be
-    said. loosing friends because of words can hurt. but not saying them
-    even more.
+    built up anger which comes out and things which should never be
+    said. i'm afraid of loosing friends because words can hurt. 
+    but not saying them even more.
 
 I really, really enjoyed it. It made my day! :) I will probably sew it
 back together and give it to somebody else, if he/she needs it.
