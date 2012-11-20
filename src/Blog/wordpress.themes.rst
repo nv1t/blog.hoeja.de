@@ -23,7 +23,7 @@ teuer.
 
 ich entdeckte in einer Datei des Themes interessante Strukturen ala:
 
- .. code-block :: php
+.. code-block :: php
 
 	eval(gzinflate(base64_decode(....));
 

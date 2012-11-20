@@ -2,7 +2,7 @@
 PELICAN=pelican
 PELICANOPTS=None
 
-THEME=notmyidea
+THEME=amazium
 
 BASEDIR=$(PWD)
 INPUTDIR=$(BASEDIR)/src

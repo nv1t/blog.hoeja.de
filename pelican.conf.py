@@ -24,11 +24,11 @@ TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG='de'
 
-DISPLAY_PAGES_ON_MENU=True
+DISPLAY_PAGES_ON_MENU=False
 
 # Blogroll
 LINKS =  (
-#    ('BakeRolls', 'http://w8l.org'),
+    #('mkzer0', 'http://.org'),
          )
 
 # Social widget

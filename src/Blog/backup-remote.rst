@@ -12,7 +12,7 @@ Rausgekommen ist ein nettes kleines rsync script, welches ueber ssh
 regelmaessige Backups macht (wenn man es ausfuehrt)
 
 
-.. code-block :: bash
+ .. code-block :: bash
 
 	date=`date "+%Y-%m-%d"` 
 	HOME="/home/jan/" # Directory to be backed up
