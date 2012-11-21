@@ -40,7 +40,7 @@ Die einzelnen Gallerien sind durch "\|" bzw sogar "\\u000a\|"
 voneinander getrennt. Intern ist es: "Name":"id":"passwort":"Name?"
 Somit haben wir die Passwoerter fuer die einzelnen Gallerien. so long.
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/05/2012-05-14-140410_629x413_scrot-300x196.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/05/2012-05-14-141548_660x209_scrot-300x95.png
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/05/2012-05-14-140410_629x413_scrot-300x196.png
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/05/2012-05-14-141548_660x209_scrot-300x95.png
+.. |image0| image:: http://images.hoeja.de/blog/2012-05-14-140410_629x413_scrot-300x196.png
+.. |image1| image:: http://images.hoeja.de/blog/2012-05-14-141548_660x209_scrot-300x95.png
+.. |image2| image:: http://images.hoeja.de/blog/2012-05-14-140410_629x413_scrot-300x196.png
+.. |image3| image:: http://images.hoeja.de/blog/2012-05-14-141548_660x209_scrot-300x95.png

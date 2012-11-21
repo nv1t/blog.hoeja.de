@@ -51,7 +51,7 @@ nehmen. so long
 
 .. _Maik's Blog: http://blog.maikter.net/2011/04/18/huawei-em770w-gps-unterstutzung-aktvieren/
 
-.. |Huawai Mobile Connect| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/05/device.png
-.. |GPS COM1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/05/gps-300x180.png
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/05/device.png
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/05/gps-300x180.png
+.. |Huawai Mobile Connect| image:: http://images.hoeja.de/blog/device.png
+.. |GPS COM1| image:: http://images.hoeja.de/blog/gps-300x180.png
+.. |image2| image:: http://images.hoeja.de/blog/device.png
+.. |image3| image:: http://images.hoeja.de/blog/gps-300x180.png

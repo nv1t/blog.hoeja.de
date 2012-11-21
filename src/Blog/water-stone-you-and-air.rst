@@ -10,7 +10,7 @@ Zukunft auch, wenn jemand sich etwas unnoetig schwer macht :) Vom Titel
 wuerde ich sagen es hat irgendwas mit Terraria (einem Spiel) zu tun.
 Aber ich finde die Metapher Idee cooler!
 
-::
+ .. code-block :: plain
 
     W = water
     S = stone

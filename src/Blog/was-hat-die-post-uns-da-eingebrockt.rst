@@ -62,4 +62,4 @@ so long
 .. _Francisco de Xavier: http://de.wikipedia.org/wiki/Francisco_de_Xavier
 .. _einflussreichsten Franzoesische Regisseur: http://de.wikipedia.org/wiki/Jean-Luc_Godard
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/11/Pr6Vt-300x239.jpg
+.. |image0| image:: http://images.hoeja.de/blog/Pr6Vt-300x239.jpg

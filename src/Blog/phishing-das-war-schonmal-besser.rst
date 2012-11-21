@@ -66,4 +66,4 @@ deiner Pin... Lustig ist auch, dass wenn man auf einen Link klickt, wird
 man auf die DHL Seite geleitet ... Fazit: Nett gemacht..aber da geht
 doch noch mehr, oder? so long
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-06-002608_1024x768_scrot-300x225.png
+.. |image0| image:: http://images.hoeja.de/blog/2012-04-06-002608_1024x768_scrot-300x225.png

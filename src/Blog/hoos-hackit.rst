@@ -8,10 +8,9 @@ zum Ziel genommen, dass komplett in Bash zu loesen. Das ist mir auch
 gelungen...hab sogar einen Einzeiler, aber ich trenn es auf, damit es
 schoener zu lesen ist Das Hackit ist uebrigens hier zu finden, wer es
 selber machen will:
-`http://hoohead.hoohost.org/2011/11/kleines-sonntags-hackit/`_ [spoiler
-title="ACHTUNG SPOILER"]
+`http://hoohead.hoohost.org/2011/11/kleines-sonntags-hackit/`_ 
 
-::
+ .. code-block :: bash
 
     name="nuit";
     cookiejar="cookie.jar";
@@ -32,7 +31,7 @@ zusammenzaehlen muss. Also hol ich mir diese Zahlen ueber ein grep aus
 dem content raus, hau Leerzeilen raus (1. sed). Damit bleibt man mit
 etwas uebrig, das ungefaehr so aussieht:
 
-::
+ .. code-block :: plain
 
     2345
     6547
@@ -43,7 +42,7 @@ Dann ersetz ich alle Newlines durch Pluszeichen. Da aber eines zuviel
 drin ist, muss ich das letzte Pluszeichen zurueckersetzen, womit ich
 dann damit uebrig bleib:
 
-::
+ .. code-block :: plain
 
     2345+6547+2345+3456
 
@@ -51,6 +50,8 @@ Und das pipe ich in bc rein, was mir dann die Antwort ausrechnet. Nun
 muss ich die Antwort noch ueber ein curl eintragen und Tada :) geloest.
 Nachdem anscheinend auch die Cookies wichtig sind, nutze ich einfach die
 cookiejar Funktionen von curl, erleichtert mir das Leben ein wenig nice
-one, hoo :) [/spoiler] so long
+one, hoo :)
+
+so long
 
 .. _`http://hoohead.hoohost.org/2011/11/kleines-sonntags-hackit/`: http://hoohead.hoohost.org/2011/11/kleines-sonntags-hackit/

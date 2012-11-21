@@ -17,7 +17,7 @@ Paket namens xautomation, welches eigenltich in sich selbsterklaerend
 ist. Wer nur seine Maus alle paar Minuten mal bewegen will, ist hiermit
 gut beraten:
 
-::
+ .. code-block :: bash
 
     #!/bin/bash
     while [ 42 ]

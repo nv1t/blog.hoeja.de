@@ -12,4 +12,4 @@ Die Festplatte ist eine 2.5"er Sata Platte. So mal als vergleich. Wenn
 ich anfang dran rumzubasteln, schreib ich mehr dazu :) und werde ich
 auch ausgiebig in Schrift und Bild dokumentieren. so long
 
-.. |tablet| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/MUmCk-1024x680.jpg
+.. |tablet| image:: http://images.hoeja.de/blog/MUmCk-1024x680.jpg

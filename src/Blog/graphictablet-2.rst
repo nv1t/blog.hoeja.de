@@ -73,21 +73,21 @@ Dann werde ich über weitere Tests schreiben :) Und ich brauch auf jeden
 Fall eine 3. Hand zum löten und rumbauen...mit den vielen Kabeln geht
 das sowas von auf den Geist :-/ so long
 
-.. _|image5|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/arbeitsplatz.jpg
-.. _|image6|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/controler.jpg
+.. _|image5|: http://images.hoeja.de/blog/arbeitsplatz.jpg
+.. _|image6|: http://images.hoeja.de/blog/controler.jpg
 .. _forum.bongofish.co.uk: http://forum.bongofish.co.uk/
-.. _|image7|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/schema_cavo_tavoletta.jpg
+.. _|image7|: http://images.hoeja.de/blog/schema_cavo_tavoletta.jpg
 .. _forum.bongofish.co.uk/index.php?topic=316.0: http://forum.bongofish.co.uk/index.php?topic=316.0
-.. _|image8|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/verbindung.jpg
-.. _|image9|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/led.jpg
+.. _|image8|: http://images.hoeja.de/blog/verbindung.jpg
+.. _|image9|: http://images.hoeja.de/blog/led.jpg
 
-.. |Arbeitsplatz| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/arbeitsplatz-300x199.jpg
-.. |Wacom Controler| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/controler-300x199.jpg
-.. |Pin Schematics| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/schema_cavo_tavoletta-300x283.jpg
-.. |Y-Kabel| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/verbindung-300x199.jpg
-.. |LED - Tablet| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/led-300x199.jpg
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/arbeitsplatz-300x199.jpg
-.. |image6| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/controler-300x199.jpg
-.. |image7| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/schema_cavo_tavoletta-300x283.jpg
-.. |image8| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/verbindung-300x199.jpg
-.. |image9| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/07/led-300x199.jpg
+.. |Arbeitsplatz| image:: http://images.hoeja.de/blog/arbeitsplatz-300x199.jpg
+.. |Wacom Controler| image:: http://images.hoeja.de/blog/controler-300x199.jpg
+.. |Pin Schematics| image:: http://images.hoeja.de/blog/schema_cavo_tavoletta-300x283.jpg
+.. |Y-Kabel| image:: http://images.hoeja.de/blog/verbindung-300x199.jpg
+.. |LED - Tablet| image:: http://images.hoeja.de/blog/led-300x199.jpg
+.. |image5| image:: http://images.hoeja.de/blog/arbeitsplatz-300x199.jpg
+.. |image6| image:: http://images.hoeja.de/blog/controler-300x199.jpg
+.. |image7| image:: http://images.hoeja.de/blog/schema_cavo_tavoletta-300x283.jpg
+.. |image8| image:: http://images.hoeja.de/blog/verbindung-300x199.jpg
+.. |image9| image:: http://images.hoeja.de/blog/led-300x199.jpg

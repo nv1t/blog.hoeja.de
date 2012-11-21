@@ -14,8 +14,8 @@ LOCALE = ""
 DEFAULT_PAGINATION = 5
 DEFAULT_CATEGORY = "Blog"
 
-PIWIK_URL = "piwik.hoeja.de"
-PIWIK_SITE_ID = 2
+#PIWIK_URL = "piwik.hoeja.de"
+#PIWIK_SITE_ID = 2
 
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'

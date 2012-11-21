@@ -9,7 +9,7 @@ card into the machine and buy nothing. i made a list of all data i have
 and which is displayable: keep in mind, some of these datapoints are
 equal, coz i copied them for testing purposes
 
-::
+ .. code-block :: plain
 
     59163.6.11    45c21cecb985221b
     44045.0.37    43e75cec9b83fd3d

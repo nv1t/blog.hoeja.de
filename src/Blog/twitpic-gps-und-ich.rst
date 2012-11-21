@@ -12,7 +12,7 @@ dran gearbeitet und alle auf Bash Level runtergebracht. Es speichert
 auch nichtmehr alle Bilder ab sondern checkt diese gleich auf GPS durch
 und loescht sie, wenn sie nicht interressant sind.
 
-::
+ .. code-block :: bash
 
     #!/bin/bash
 
@@ -82,7 +82,7 @@ raushaut, sonst haette ich wahrscheinlich ein Twitterproblem mit diesen
 Timeline und man lernt viele Leute kennen mit klassen Bildern und weiss
 oft gleich wo sie wohnen.
 
-::
+ .. code-block :: bash
 
     #!/bin/bash
     while [ 1 ]; do

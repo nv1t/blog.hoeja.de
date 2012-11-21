@@ -7,7 +7,7 @@ i prepared two different card outputs (just excerpts) to compare them.
 The first card is a guestcard, which you can buy without beeing registered in the system. The part i left out, is a not encrypted and empty sector which is totaly unimportant.
 The card has the UID: aa257c3c which are the first bytes of the card.
 
-::
+ .. code-block :: plain
 
     0000000: aa25 7c3c cf88 0400 468e 6652 5d10 3306  .%|<....F.fR].3.
     0000010: 3202 0000 0138 0138 0138 0000 0000 0000  2....8.8.8......
@@ -29,7 +29,7 @@ The card has the UID: aa257c3c which are the first bytes of the card.
 
 I want to explain the second card, and after that i'm going to talk about the structur of the backup files and their format.
 
-::
+ .. code-block :: plain
 
     0000000: 4dfb fd2b 6088 0400 46ba 1456 6150 1810  M..+`...F..VaP..
     0000010: 3202 0000 0138 0138 0138 0000 0000 0000  2....8.8.8......
@@ -59,7 +59,7 @@ The sector 01 is completly empty and not used on this type of system therefore i
 A sector consists of 48 bytes. Each sector is divided into type [A] and [B]. Every type has 24 bytes to write in. Every sector and even every type has their own encryption key based on 6 bytes.
 It is written as:
 
-::
+ .. code-block :: plain
 
     00000b0: keyA fourDividerBytes keyB
     00000c0: DataA                 DataB
@@ -77,7 +77,7 @@ the storing process, i wrote 16 bytes in my little "thinkingbook" and
 saw something pretty interesting. The 16 bytes were from sector 04 the
 first 16 bytes of [A].
 
-::
+ .. code-block :: plain
 
     0000100: 45d2 49ec ba84 3d33 14a0 4e8e e032 6b47  E.I...=3..N..2kG
     0000110: 737d b70c 3961 0fe0 260b 79be 2972 37c7  s}..9a..&.y.)r7.
@@ -90,7 +90,7 @@ new one. I believed the value has to be stored in an encrypted sector,
 but during my lookup through other sectores, i discovered more of these
 seperators.
 
-::
+ .. code-block :: plain
 
     00000c0: ff98 b79a be06 578b bd47 d545 51e7 fddd  ......W..G.EQ...
     00000d0: adcf 9667 5a0d 067d 0000 0000 0000 0000  ...gZ..}........

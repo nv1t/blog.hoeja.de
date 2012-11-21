@@ -13,7 +13,7 @@ Gespraech mit einem Entwickler. Ein Fehler mit dem ich schon etwas
 laenger rumkaempfe beruht garnicht auf JSXGraph, sondern auf Javascript
 selber. Stellen wir uns folgenden Fall vor:
 
-::
+ .. code-block :: javascript
 
     funs = [];
     for(i = 0; i < 10; i++) {
@@ -28,7 +28,7 @@ Array und wollen dann spaeter den Wert ausgeben. Aber das geht nicht so
 einfach. Er wird 10 zurueckliefern. Zum Glueck hatte er gleich eine
 Loesung parat:
 
-::
+ .. code-block :: javascript
 
     funs = [];
     for(i = 0; i < 10; i++) {

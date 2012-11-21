@@ -44,5 +44,5 @@ nicht auseinander nehmen moechte, weil das mein einziger
 funktionierender Rechner mit Akku gerade ist. Ich freu mich schon, wenn
 alles laeuft und ich einen Tablet PC habe :) so long
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/10/DSC_3677-300x199.jpg
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/10/DSC_3681-300x199.jpg
+.. |image0| image:: http://images.hoeja.de/blog/DSC_3677-300x199.jpg
+.. |image1| image:: http://images.hoeja.de/blog/DSC_3681-300x199.jpg

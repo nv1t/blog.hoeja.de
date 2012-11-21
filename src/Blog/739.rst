@@ -11,8 +11,9 @@ ftp mit Passwoertern, oder ssl verschluesselte Seiten. Alles ist
 moeglich geworden! So unterstuetzt PHP nun auch das schreiben in
 komprimierte Dateien:
 
-::
+ .. code-block :: php
 
+    <?php
     $fp = fopen("compress.zlib://foo-bar.txt.gz", "wb");
     if (!$fp) die("Unable to create file.");
     fwrite($fp, "This is a test.\n");

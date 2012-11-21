@@ -5,7 +5,7 @@ PHP Bashing
 
 let's do a little php bashing on my way :) found this posted by 0xq1
 
-::
+ .. code-block :: php
 
     % php -a
     Interactive shell

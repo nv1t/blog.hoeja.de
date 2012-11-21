@@ -22,7 +22,7 @@ Behaviour! Was fuer Moeglichkeiten gibt es nun: die eine waere ein
 Unterverzeichnis tiefer zu gehen und darein zu entpacken. Die andere
 Moeglichkeit ist ./ zu loeschen:
 
-::
+ .. code-block :: bash
 
     tar --delete --no-recursion -f restore.tar ./
 
@@ -33,7 +33,7 @@ http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=605425 Der das Problem
 naeher beschreibt. Aber wie schon gesagt, ist das in meinen Augen kein
 Bug. so long
 
-.. _|image1|: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/nvr.png
+.. _|image1|: http://images.hoeja.de/blog/nvr.png
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/nvr-300x175.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/nvr-300x175.png
+.. |image0| image:: http://images.hoeja.de/blog/nvr-300x175.png
+.. |image1| image:: http://images.hoeja.de/blog/nvr-300x175.png

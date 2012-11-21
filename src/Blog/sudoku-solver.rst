@@ -12,7 +12,7 @@ Variante. Laptop ausgepackt und einen allgemeinen Solver geschrieben.
 Leider war ich zu der Zeit sehr vernarrt in php und deshalb ist das hier
 entstanden:
 
-::
+ .. code-block :: php
 
     #!/usr/bin/env php
     solve();

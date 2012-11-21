@@ -31,9 +31,9 @@ don't mess up with the wiring it should work :) i'm going to the local
 hardware store tmrw and have a look what i'm gonna need and buy..has to
 be cheap. so long
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/41hNjZgLWdL._SL500_AA300_-150x150.jpg
-.. |playphone from simba| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/111264-150x150.jpg
-.. |see through phone| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/6210t.jpg
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/41hNjZgLWdL._SL500_AA300_-150x150.jpg
-.. |image4| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/111264-150x150.jpg
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/6210t.jpg
+.. |image0| image:: http://images.hoeja.de/blog/41hNjZgLWdL._SL500_AA300_-150x150.jpg
+.. |playphone from simba| image:: http://images.hoeja.de/blog/111264-150x150.jpg
+.. |see through phone| image:: http://images.hoeja.de/blog/6210t.jpg
+.. |image3| image:: http://images.hoeja.de/blog/41hNjZgLWdL._SL500_AA300_-150x150.jpg
+.. |image4| image:: http://images.hoeja.de/blog/111264-150x150.jpg
+.. |image5| image:: http://images.hoeja.de/blog/6210t.jpg

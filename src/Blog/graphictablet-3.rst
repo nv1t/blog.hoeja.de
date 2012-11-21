@@ -15,10 +15,11 @@ das Tablet einwandfrei laeuft. Hier sind 2 Skizzen, die mit Photoshop
 und dem Tablet entstanden sind: 
 
 |panic|
+
 |rose|
 
 jetzt muss ich das
 case noch anpassen und alles ist prima :) so long
 
-.. |panic| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/286505_10150294786699593_815334592_7552750_5577596_o-150x150.jpg
-.. |rose| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/287898_10150288927504593_815334592_7495200_958030_o-150x150.jpg
+.. |panic| image:: http://images.hoeja.de/blog/286505_10150294786699593_815334592_7552750_5577596_o-150x150.jpg
+.. |rose| image:: http://images.hoeja.de/blog/287898_10150288927504593_815334592_7495200_958030_o-150x150.jpg

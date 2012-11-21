@@ -394,9 +394,9 @@ wie ihre Unterhosen.
 .. _`http://pastebin.com/2LfCH2pr`: http://pastebin.com/2LfCH2pr
 .. _`http://pastebin.com/ZUNuYfWT`: http://pastebin.com/ZUNuYfWT
 
-.. |stalker-blog| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/2011-04-26-215444_1024x768_scrot-150x150.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/2011-04-27-034601_1024x768_scrot-150x150.png
-.. |spy| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/spy-150x150.png
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/2011-04-26-215444_1024x768_scrot-150x150.png
-.. |image4| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/2011-04-27-034601_1024x768_scrot-150x150.png
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/04/spy-150x150.png
+.. |stalker-blog| image:: http://images.hoeja.de/blog/2011-04-26-215444_1024x768_scrot-150x150.png
+.. |image1| image:: http://images.hoeja.de/blog/2011-04-27-034601_1024x768_scrot-150x150.png
+.. |spy| image:: http://images.hoeja.de/blog/spy-150x150.png
+.. |image3| image:: http://images.hoeja.de/blog/2011-04-26-215444_1024x768_scrot-150x150.png
+.. |image4| image:: http://images.hoeja.de/blog/2011-04-27-034601_1024x768_scrot-150x150.png
+.. |image5| image:: http://images.hoeja.de/blog/spy-150x150.png

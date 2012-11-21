@@ -1,15 +1,12 @@
-YASI #i don&#039;t count anymore
-################################
+YASI I don't count anymore
+##########################
 :date: 2012-02-24 19:29
 :tags: de, pastebin, wtf, yasi
 
 Ist da nicht sogar noch mehr machbar? Ich lasse das studieren des Codes
 dem geuebten Leser offen. Have fun!
 
-::
-
-
-
+ .. code-block :: php
 
     <?
     include("functions.php");
@@ -225,6 +222,8 @@ dem geuebten Leser offen. Have fun!
     include("regform.php");
     ?>
 
-(Quelle: `http://pastebin.com/2LHNZ2vC`_ so long
+(Quelle: `http://pastebin.com/2LHNZ2vC`_ )
+
+so long
 
 .. _`http://pastebin.com/2LHNZ2vC`: http://pastebin.com/2LHNZ2vC

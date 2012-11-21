@@ -1,5 +1,5 @@
-Scart Input -&gt; Output
-########################
+Scart Input -> Output
+#####################
 :date: 2012-01-22 22:32
 :tags: analog, de, receiver, there i fixed it
 
@@ -37,7 +37,7 @@ hervorragend:
 
 so long
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/01/220px-SCART.svg_.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/01/2012-01-22-222718_817x680_scrot-300x249.png
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/01/DSC_3885-300x197.jpg
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/01/DSC_3883-300x221.jpg
+.. |image0| image:: http://images.hoeja.de/blog/220px-SCART.svg_.png
+.. |image1| image:: http://images.hoeja.de/blog/2012-01-22-222718_817x680_scrot-300x249.png
+.. |image2| image:: http://images.hoeja.de/blog/DSC_3885-300x197.jpg
+.. |image3| image:: http://images.hoeja.de/blog/DSC_3883-300x221.jpg

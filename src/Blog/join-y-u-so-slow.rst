@@ -23,7 +23,7 @@ euch da mal die Klasse fuer, noch ist sie im Roh Zustand) Nunja, es
 sollen nun aber beispielsweise alle Nachrichten angezeigt werden, die
 "bounced" sind. Man moege meinen ein einfaches:
 
-::
+ .. code-block :: sql
 
     select mailid 
     from history 
@@ -42,7 +42,7 @@ Ich hoer euch schon schreien: "Das geht ueber ein LEFT JOIN". Das wurde
 mir auch von den SQL-Gurus gesagt. Die Abfrage wuerde dann so lauten,
 oder so aehnlich:
 
-::
+ .. code-block :: sql
 
     select aa.mailid 
     from history as aa 
@@ -71,7 +71,7 @@ aber Probleme auf, wenn man nach 2 oder 3 Elementen Limitieren will.
 Wenn ich alle Nachrichten woellte, die "bounced" sind, nicht "sent" und
 noch in der Mailqueue, also nicht "removed", saehe das so aus:
 
-::
+ .. code-block :: sql
 
     select aa.mailid 
     from history as aa 
@@ -105,7 +105,7 @@ Any Solution
 
 Mir wurde auch die Funktion ANY ans Herz gelegt. Ja, sowas gibt es:
 
-::
+ .. code-block :: sql
 
     select mailid
     from history 
@@ -129,7 +129,7 @@ Ich suchte also Krampfhaft nach einer anderen Moeglichkeit. Bin endlos
 mit Kaffee in der einen Hand und Stift drehend in der anderen durch die
 Flure gewandert. Wir wissen, dass wir mit
 
-::
+ .. code-block :: sql
 
     select mailid 
     from history 
@@ -141,7 +141,7 @@ Flure gewandert. Wir wissen, dass wir mit
 
 eine Liste aller mailids kriegen, die nicht in der 2. Liste
 
-::
+ .. code-block :: sql
 
     select mailid 
     from history 
@@ -153,7 +153,7 @@ da eindeutige Elemente drin haben. Theoretisch koennen wir beide Listen
 zusammenschmeissen mit einem UNION und koennen darauf mithilfe eines
 Subquerys ein GROUP BY anwenden
 
-::
+ .. code-block :: sql
 
     select mailid 
     from 
@@ -181,7 +181,7 @@ oder so etwas berechnet hat, nochmal einschraenken moechte. Ich verwende
 es hier um die doppelten Zeilen zu zaehlen und nur die mit
 Zeilenanzahl=1 zurueckzugeben:
 
-::
+ .. code-block :: sql
 
     select mailid 
     from 
@@ -206,7 +206,7 @@ nicht sagen, ob die Nachricht nur in bounced, sent oder removed
 Auftritt. Die Loesung meines Problems war eine Variable, die ich vor dem
 UNION setze! :) Damit krieg ich ein weiteres Feld:
 
-::
+ .. code-block :: sql
 
     select mailid
     from 

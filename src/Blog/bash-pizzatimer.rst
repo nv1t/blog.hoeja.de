@@ -8,7 +8,7 @@ langweilig und nachdem ich von `@BakeRolls`_ den PizzaTimer in Java
 gesehen habe, dachte ich mir, dass sich das doch sicher auch als
 Oneliner in Bash umsetzen laesst :)
 
-::
+ .. code-block :: bash
 
     sec=$1; 
     while [ $sec -gt 0 ]; do 

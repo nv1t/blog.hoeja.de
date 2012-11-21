@@ -6,7 +6,7 @@ vista source code leaked
 Das ist auch ein "pastebin, wtf?!?" und ist mir vor gut einer Woche
 ueber den Weg gelaufen. Ich musste sehr lachen!
 
-::
+ .. code-block :: c
 
     /*
     GNOT General Public License!

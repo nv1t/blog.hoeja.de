@@ -7,7 +7,7 @@ I thought it wouldn't work...but apparently, something happend. A few
 days ago, i checked a local RFID System...I wanted to know, how it is
 working and so on... The card looks something like this:
 
-::
+ .. code-block :: plain
 
     0000000: adb0 a0a3 1e88 0400 468f 3658 5570 3710  ........F.6XUp7.
     0000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -25,7 +25,7 @@ the x'es represent numbers on the card. i blanked them out, coz they are
 mine ;) I thought, the uid, which is stored on the card, has to be
 looked up in a database. So i figured, let's try a sql injection:
 
-::
+ .. code-block :: plain
 
     0000040: 4445 0000 xxxx xx00 0000 0000 0000 0000  DE..xxx.........
     0000050: 3030 2220 6f72 2031 3d31 2200 0000 0000  00" or 1="1.....

@@ -7,7 +7,7 @@ In meinem ersten Semester an der Uni forderte mich mein Korrektor zu
 einer Aufgabe herraus. Ich sollte sie loesen und 1 Uebungsblatt erlassen
 kriegen. Hier moechte ich eine Loesung zu dem Problem vorstellen:
 
-**Problem:** Die Folge $(\\sqrt{p\_i})\_{i \\in \\mathbb{N}}$ der
+**Problem:** Die Folge $\\sqrt{p\_i})\_{i \\in \\mathbb{N}}$ der
 Primzahlenwurzeln ist linear unabhaengig ueber dem Koerper der
 rationalen Zahlen. 
 

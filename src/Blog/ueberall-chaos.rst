@@ -10,10 +10,9 @@ Veraenderungen rauskamen nach einige Durchlaeufen. Stellen wir uns mal
 die Funktion vor: $$c\_{n+1} = c\_n^2-2$$
 
 0.5
-
 0.5000000000001
 
-::
+ .. code-block :: plain
 
     -1.75
      1.0625
@@ -48,7 +47,7 @@ die Funktion vor: $$c\_{n+1} = c\_n^2-2$$
      1.46258247398
      0.139147493204
 
-::
+ .. code-block :: plain
 
     -1.75
      1.0625
@@ -87,6 +86,7 @@ Bei einer minimalen Veraenderung des Seedes faellt das relativ schnell
 ins Gewicht. Ich habe das mal versucht zu plotten mit 0.5 und 0.501:
 
 |fake-0.5|
+
 |fake-0.501|
 
 Wenn man es mit einem
@@ -102,6 +102,6 @@ aus. Ich betrachte in diesem Punkt 2 Statii. d.h. ich schau nicht
 welchen Wert der genau ist, sondern mache nur eine: Ist er Plus oder
 Minus. aber seht selbst: https://github.com/nv1t/Fakerandom/ so long
 
-.. |fake-0.5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/03/fake-0.5.png
-.. |fake-0.501| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/03/fake-0.501.png
-.. |real| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/03/real.png
+.. |fake-0.5| image:: http://images.hoeja.de/blog/fake-0.5.png
+.. |fake-0.501| image:: http://images.hoeja.de/blog/fake-0.501.png
+.. |real| image:: http://images.hoeja.de/blog/real.png

@@ -13,8 +13,7 @@ letzteres Entschieden, weil es mir deutlich mehr Bewegungsfreiraum gibt
 ueber die Geraete die ich verwende. Aber, weil ich nicht staendig mich
 einloggen wollte, hab ich ein kleines Script gebastelt:
 
-::
-
+ .. code-block :: bash
 
     #!/bin/bash
     username="" # username
@@ -53,7 +52,7 @@ einfach und such mir nur das raus wo ich am Ende hinwill. Aber unter der
 Haube passiert eine ganze Menge. Es treten insgesamt 4 Requests auf, bis
 ich auf der eigentlichen Loginseite lande:
 
-::
+ .. code-block :: plain
 
     GET / HTTP/1.1
     Host: www.google.de
@@ -85,7 +84,7 @@ Client-Mac wird zur Mac-Authentifizierung eingesetzt. Auch wird hier
 schon eine Challenge berechnet, die spaeter noch interressant sein wird.
 Der 2. Request ist eigentlich bloss der follow zur splash.php
 
-::
+ .. code-block :: plain
 
     GET /coova/splash.php?loginurl=https%3a%2f%2fhotspot.tmt.de%2fcoova%2fhs_land.php%3fres%3dnotyet%26uamip%3d88.209.16.1%26uamport%3d3990%26challenge%3d63189192171624f280e7b58d2d7a9c07%26called%3d92-11-75-7D-2A-67%26mac%3d00-19-D2-97-92-16%26ip%3d88.209.16.107%26nasid%3dtmt_coova%26sessionid%3d4eddeeb200000027%26userurl%3dhttp%253a%252f%252fwww.google.de%252f%26md%3d091099DB48081C771BD7E6C886722B89 HTTP/1.1
     Host: hotspot.tmt.de
@@ -110,7 +109,7 @@ Das hier koennen wir recht kurz halten. Die Splash wird aufgerufen um
 alle Daten zu uebergeben. Auf dieser splash.php ist eben dieser meta-tag
 mit einem Refresh. Dieser Refresh geht zur hs\_land.php.
 
-::
+ .. code-block :: plain
 
     GET /coova/hs_land.php?res=notyet&uamip=88.209.16.1&uamport=3990&challenge=63189192171624f280e7b58d2d7a9c07&called=92-11-75-7D-2A-67&mac=00-19-D2-97-92-16&ip=88.209.16.107&nasid=tmt_coova&sessionid=4eddeeb200000027&userurl=http%3a%2f%2fwww.google.de%2f&md=091099DB48081C771BD7E6C886722B89 HTTP/1.1
     Host: hotspot.tmt.de
@@ -138,7 +137,7 @@ naechsten geworfen, mit einem 302er nach dem anderen. An login.php wird
 das Formular uebermittelt als Post-Variablen. Auch wird hier die
 Challenge uebermittelt, welche im weiteren Verlauf interressant wird.
 
-::
+ .. code-block :: plain
 
     POST /coova/login.php HTTP/1.1
     Host: hotspot.tmt.de
@@ -169,7 +168,7 @@ hin und hergeworfen werden. Dieses Passwort krieg ich schon beim letzten
 Request und jetzt nur wieder mitueberben an logon. Das ganze ist wohl
 ein kleines Programm/Server, welcher auf Port 3990 laeuft.
 
-::
+ .. code-block :: plain
 
     GET /logon?username=${username}&password=${calcPassword}&userurl=http%3A%2F%2Fwww.google.de%2F HTTP/1.1
     Host: 88.209.16.1:3990
@@ -193,7 +192,7 @@ ein kleines Programm/Server, welcher auf Port 3990 laeuft.
 Man wird nun auf die Haupseite, die "hs\_land.php" zurueckgeleitet.
 Diesmal aber mit meinem res=success
 
-::
+ .. code-block :: plain
 
     GET /coova/hs_land.php?res=success&uamip=88.209.16.1&uamport=3990&called=92-11-75-7D-2A-67&uid=${username}&mac=00-19-D2-97-92-16&ip=88.209.16.107&nasid=tmt_coova&sessionid=4eddeeb200000027&redirurl=&userurl=http%3a%2f%2fwww.google.de%2f&md=E9237655ECBB6B4F191AAA36B7F5A267 HTTP/1.1
     Host: hotspot.tmt.de
@@ -218,7 +217,7 @@ Diesmal aber mit meinem res=success
 Der letzte 302er geht auf die Ursprungsseite die ich eigentlich aufrufen
 wollte.
 
-::
+ .. code-block :: plain
 
     GET / HTTP/1.1
     Host: www.google.de

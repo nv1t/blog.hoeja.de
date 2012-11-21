@@ -16,7 +16,7 @@ Fehler geliefert. Doch, als ich auf Elemente zugreifen wollte, die nur
 eine Zahl als String hatten, fiel das ganze fehl. (dass keiner verwirrt
 ist: das ist die php shell, die man mit php -a bekommt)
 
-::
+ .. code-block :: php
 
     php > $str = '{"b": {"a": "test","1": "test2"}}';
     php > $arr = json_decode($str);

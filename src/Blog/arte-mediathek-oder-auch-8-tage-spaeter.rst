@@ -9,7 +9,7 @@ Streams, was das Leben ein wenig erleichtert ;) Herrausgekommen ist ein
 kleines Script welches rtmpdump nimmt und zumindest von Arte
 runterlaedt.
 
-::
+ .. code-block :: bash
 
     #!/bin/sh
 

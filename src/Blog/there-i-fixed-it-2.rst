@@ -24,5 +24,5 @@ dass man alte Sachen nicht unbedingt immer wegschmeissen muss, sondern
 man kann auch einfach mal nachschauen, was eigentlich kaputt ist :) so
 long
 
-.. |Kaputte Loetstelle| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/wecker1-284x300.jpg
-.. |Heureka| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/wecker2-300x228.jpg
+.. |Kaputte Loetstelle| image:: http://images.hoeja.de/blog/wecker1-284x300.jpg
+.. |Heureka| image:: http://images.hoeja.de/blog/wecker2-300x228.jpg

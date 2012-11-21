@@ -15,4 +15,4 @@ auch, wenn man etwas zum Dekantieren hat)
 Also...holt eure
 Schrauben raus und passt auf, dass sie fest sitzen :) so long
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/11/7W39P-199x300.jpg
+.. |image0| image:: http://images.hoeja.de/blog/7W39P-199x300.jpg

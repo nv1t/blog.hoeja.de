@@ -88,9 +88,9 @@ wonderful piece of art! so long
 
 .. _Shaina Feinberg (www.f-berg.org): http://f-berg.org
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3980-300x199.jpg
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3965-300x199.jpg
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3982-199x300.jpg
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3980-300x199.jpg
-.. |image4| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3965-300x199.jpg
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/02/DSC_3982-199x300.jpg
+.. |image0| image:: http://images.hoeja.de/blog/DSC_3980-300x199.jpg
+.. |image1| image:: http://images.hoeja.de/blog/DSC_3965-300x199.jpg
+.. |image2| image:: http://images.hoeja.de/blog/DSC_3982-199x300.jpg
+.. |image3| image:: http://images.hoeja.de/blog/DSC_3980-300x199.jpg
+.. |image4| image:: http://images.hoeja.de/blog/DSC_3965-300x199.jpg
+.. |image5| image:: http://images.hoeja.de/blog/DSC_3982-199x300.jpg

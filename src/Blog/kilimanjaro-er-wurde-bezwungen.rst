@@ -5,11 +5,11 @@ Kilimanjaro, er wurde bezwungen!
 
 Hat dem armen Teufel keiner erklaert, dass man nicht fuer alles das
 gleiche Passwort nutzen soll. Und das in der Zeit...kilimanjaro ist
-jetzt auch nicht DAS moerderpasswort...dazu kommt der lustige Nutzername
+jetzt auch nicht DAS Moerderpasswort...dazu kommt der lustige Nutzername
 ncc, nc9h ;) brute force laesst gruessen! Aber das sieht mir eher nach
 einem Login-Save Dump aus :D Frage: selfpwned?
 
-::
+ .. code-block :: plain
 
     Firefox ==> Url: http://www.nnm.ru Login: nc9h Password: kilimanjaro
     Firefox ==> Url: http://xxx.clxub.com Login: nc9h Password: kilimanjaro

@@ -9,7 +9,7 @@ array\_map das ganze zu machen, aber es hat nie so hingehauen wie ich
 wollte, weil array\_map die keys nicht uebergibt. Aber es gibt eine
 andere Moeglichkeit:
 
-::
+ .. code-block :: php
 
     print implode(', ',array_map(function($key,$val) { 
         return $key.'='.$val; 

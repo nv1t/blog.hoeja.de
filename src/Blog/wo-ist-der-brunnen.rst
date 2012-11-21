@@ -20,7 +20,7 @@ sich eine Liste speichert und dadurch immer nur die ersten 3-4 Brunnen
 probiert, aber das macht bei 10 Brunnen und einer Bildgroesse von 500px
 auf 500px nicht viel aus. Hier ist also der Code:
 
-::
+ .. code-block :: python
 
     #!/usr/bin/env python2
     import math,random,sys
@@ -61,7 +61,7 @@ Nicht wundern ich zeichne die Brunnen nicht mit ein. Liese sich aber ja
 noch leicht unterbringen :) Er gibt das direkt auf der Konsole aus, kann
 aber einfach umgeleitet werden mit:
 
-::
+ .. code-block :: bash
 
     $ ./brunnen.py > image.png
 
@@ -73,4 +73,4 @@ PIL ;) achja...und so sieht das dann aus:
 so long
 
 
-.. |Brunnenproblem| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/09/image-300x300.png
+.. |Brunnenproblem| image:: http://images.hoeja.de/blog/image-300x300.png

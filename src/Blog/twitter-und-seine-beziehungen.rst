@@ -12,7 +12,7 @@ liefert.
 Profil
 ~~~~~~
 
-::
+ .. code-block :: javascript
 
     [{
         "profile_background_tile": false,
@@ -78,7 +78,7 @@ Profil
 Friendslist
 ~~~~~~~~~~~
 
-::
+ .. code-block :: javascript
 
     {
         "next_cursor": 0,
@@ -97,7 +97,7 @@ schnell einen kleinen Server gebastelt, der im Prinzip als Kopf eines
 kleinen Clusters wirkt, dem man immer Clients hinzufuegen oder wegnehmen
 kann und es hat keinen Einfluss auf die Ausfuehrung:
 
-::
+ .. code-block :: javascript
 
     var fs = require('fs');
     var net = require('net');

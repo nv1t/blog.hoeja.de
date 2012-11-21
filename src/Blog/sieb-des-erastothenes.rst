@@ -7,7 +7,7 @@ Wir sollten die Wochen in der Uni das Sieb des Eratosthenes in Maple
 nachprogrammieren. Nach ein bisschen ueberlegen bin ich auf eine recht
 nette Loesung gestossen, die insgesamt 3 Zeilen umfasst :)
 
-::
+ .. code-block :: maple
 
     n := 100;
     M := {`$`(2 .. n)};

@@ -16,7 +16,7 @@ selber ein kleines Skript geschrieben, was mir die Noten ausliest (man
 kriegt auch Lautstaerke der Note und noch eine Zahl, von der ich nicht
 weiss, was sie tut, weil sie sich nicht aendert)
 
-::
+ .. code-block :: python
 
     #!/usr/bin/env python
     import os
@@ -39,7 +39,7 @@ zu visualisieren. Man darf gespannt sein :) edit: ich moechte mich
 entschuldigen...der obige code ist absolut haesslich und garnicht im
 python stil...ich war an dem abend anscheinend muede:
 
-::
+ .. code-block :: python
 
     #!/usr/bin/env python2
     import os

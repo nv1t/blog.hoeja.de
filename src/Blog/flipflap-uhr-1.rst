@@ -40,9 +40,9 @@ aktuell aus, ohne Platine und mit abgetrennten Kabeln:
 Mal sehen, was mit dem Motor los ist und ob ich ihn austauschen kann. so
 long
 
-.. |FlipFlap Uhr| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap1-300x199.jpg
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap3-300x159.jpg
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap2-300x174.jpg
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap1-300x199.jpg
-.. |image4| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap3-300x159.jpg
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/08/flipflap2-300x174.jpg
+.. |FlipFlap Uhr| image:: http://images.hoeja.de/blog/flipflap1-300x199.jpg
+.. |image1| image:: http://images.hoeja.de/blog/flipflap3-300x159.jpg
+.. |image2| image:: http://images.hoeja.de/blog/flipflap2-300x174.jpg
+.. |image3| image:: http://images.hoeja.de/blog/flipflap1-300x199.jpg
+.. |image4| image:: http://images.hoeja.de/blog/flipflap3-300x159.jpg
+.. |image5| image:: http://images.hoeja.de/blog/flipflap2-300x174.jpg

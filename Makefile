@@ -42,7 +42,7 @@ ssh_upload: $(OUTPUTDIR)/index.html
 	scp -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: $(OUTPUTDIR)/index.html
-	rsync -r --delete $(OUTPUTDIR)/* $(USER)@$(HOST):$(TARGET_DIR)
+	rsync -r $(OUTPUTDIR)/* $(USER)@$(HOST):$(TARGET_DIR)
 
 .PHONY: html help clean ssh_upload rsync_upload
     

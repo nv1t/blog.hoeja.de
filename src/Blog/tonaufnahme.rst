@@ -11,4 +11,4 @@ Gespraeche auf Twitter ueber Musik und war wieder angefixt etwas zu
 machen :)
 
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/12/aufnahme1-199x300.jpg
+.. |image0| image:: http://images.hoeja.de/blog/aufnahme1-199x300.jpg

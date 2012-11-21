@@ -10,7 +10,7 @@ netten Eintrag gestolpert, den ich eigentlich sehr cool fand. Um es
 gleich Vorweg zu nehmen: Es existieren davon noch einige mehr, aber das
 war eigentlich der netteste :)
 
-::
+ .. code-block :: plain
 
     UEsDBBQAAgAIABVoUz8z7a9qJQEAACoCAAARABwAVENQQ2xpZW50QXBwLmphdmFVVAkAA9mtnk7d
     rZ5OdXgLAAEEeEEAAAQBAgAAbZBBSwMxEIXP3V8x7CkVCXouHkQ8W9iCB/UQ03E3NpsJyWxrkf53
@@ -34,7 +34,7 @@ Das fand ich in einer Datei abgespeichert bei mir. Natuerlich handelt es
 sich um etwas base64 codiertes. Wenn man das decodiert und ueberprueft
 sieht man, dass es eine ZIP Datei ist:
 
-::
+ .. code-block :: bash
 
     15:43:56 seda:~/dev/pastebin/
     % base64 -d -i data/A9jtH7Lm > output
@@ -49,9 +49,11 @@ sieht man, dass es eine ZIP Datei ist:
 
 In dieser ZIP Datei sind 2 Java Source Codes. Die sind nicht sonderlich
 spannend, aber ich hab sie der vollstaendigkeithalber lieber mal
-drangehaengt: **TCPClient.java**
+drangehaengt: 
 
-::
+**TCPClient.java**
+
+ .. code-block :: java
 
     import java.net.*;
     import java.io.*;
@@ -80,7 +82,7 @@ drangehaengt: **TCPClient.java**
 
 **TCPServer.java**
 
-::
+ .. code-block :: java
 
     import java.net.*;
     import java.io.*;

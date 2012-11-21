@@ -20,7 +20,7 @@ least 2 persons have on the same day. Because it's kinda frustrating to
 calculate this fraction with a calculater i wrote a small python script
 :)
 
-.. code-block :: python
+ .. code-block :: python
 
     n=25 # number of persons
     ret=1
@@ -46,7 +46,7 @@ everybody has on a different day. So we get: $P = 1-\\frac{u}{m} =
 1-\\frac{(365y)!}{(365y-n)! \\cdot (365 \\cdot y)^n}$ which is the
 possibility at least 2 persons have on the same day and same year.
 
-.. code-block :: python
+ .. code-block :: python
 
     n=50 # number of persons
     y=25 # range of years
@@ -64,7 +64,7 @@ another basic approach i would love to hear about it :) different
 outcome as well...i'm still a bit on the: "there has to be something
 wrong"-side so long :)
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/03/birtday-paradox-e1300974060373.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/03/birthday-paradox2-e1300975268660-300x188.png
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/03/birtday-paradox-e1300974060373.png
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/03/birthday-paradox2-e1300975268660-300x188.png
+.. |image0| image:: http://images.hoeja.de/blog/birtday-paradox-e1300974060373.png
+.. |image1| image:: http://images.hoeja.de/blog/birthday-paradox2-e1300975268660-300x188.png
+.. |image2| image:: http://images.hoeja.de/blog/birtday-paradox-e1300974060373.png
+.. |image3| image:: http://images.hoeja.de/blog/birthday-paradox2-e1300975268660-300x188.png

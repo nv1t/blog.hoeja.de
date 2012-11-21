@@ -28,7 +28,9 @@ weshalb ich ihn offen und die Farbe ins weisse auslaufen lies. Auch wird
 man einige Dinge vermissen: Leute auf Leitern, Salamander, Kleinigkeiten
 in den Fenster und so weiter. Dies musste ich alles Aufgrund von
 Pinselungenauigkeiten weglassen. Alles in allem ist es ziemlich gut
-geworden und ich bin eigentlich recht stolz :) [gallery link="file"] Ich
-nehm keine Auftraege an! so long
+geworden und ich bin eigentlich recht stolz :) 
+Ich nehm keine Auftraege an! 
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/01/LW399-300x253.jpg
+so long
+
+.. |image0| image:: http://images.hoeja.de/blog/LW399-300x253.jpg

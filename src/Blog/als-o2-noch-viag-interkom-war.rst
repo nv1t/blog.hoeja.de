@@ -83,7 +83,6 @@ der Datenbank. Am 3.11 werd ich mit einer Kamera bewaffnet in den Laden
 gehen und das Handy freischalten lassen. :) Ich freu mich schon drauf.
 so long
 
-.. _|image1|: http://nuit.homeunix.net/blag/wp-content/uploads/2011/09/240019_10150221089089593_815334592_6936382_7583726_o.jpg
+.. _|image1|: http://images.hoeja.de/blog/240019_10150221089089593_815334592_6936382_7583726_o.jpg
 
-.. |image0| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/09/240019_10150221089089593_815334592_6936382_7583726_o-199x300.jpg
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2011/09/240019_10150221089089593_815334592_6936382_7583726_o-199x300.jpg
+.. |image0| image:: http://images.hoeja.de/blog/240019_10150221089089593_815334592_6936382_7583726_o-199x300.jpg

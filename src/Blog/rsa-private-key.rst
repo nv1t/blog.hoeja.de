@@ -7,7 +7,7 @@ Da wollte wohl jemand seinen Private Key bekannt machen :) Leute...ihr
 muesst den Public Key veroeffentlichen und nicht den
 Private...nanana...so geht das ja nicht!
 
-::
+ .. code-block :: plain
 
     -----BEGIN RSA PRIVATE KEY-----
     Proc-Type: 4,ENCRYPTED

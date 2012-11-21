@@ -6,7 +6,7 @@ Funktionsname ist das wichtigste
 Man sollte seine Funktionen immer "sinnvoll" benennen. Es gibt aber
 Leute, die uebertreiben mit dem Name ein wenig:
 
-::
+ .. code-block :: java
 
     public void testItDoesntRequestNextBondWhenMaximumDepthReached()
     {

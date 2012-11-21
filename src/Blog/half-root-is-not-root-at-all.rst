@@ -17,7 +17,7 @@ gerade billig. Man munkelt es bewegt sich um die 1200 Euro. Waehrend des
 Updates konnte ich das Update Package rausfiltern, was mir einige
 Insights in das Geraet gegeben hat, weil dieses naemlich so aussieht:
 
-::
+ .. code-block :: bash
 
     --__===== SPINETIX INSTALLATION IMAGE =====__--
     --__===== HEADER START =====__--
@@ -44,7 +44,7 @@ es nicht spass macht ein nicht lauffaehiges zu haben. Eine Root-Shell
 musste her. Ich wusste ja, dass ein was Unixiges drauf laeuft (erste
 Vermutung FreeBSD). Es gibt auch einen sshd
 
-::
+ .. code-block :: bash
 
     root@spx-hmp-:/etc/init.d# ls
     README        hwwatchdog       ntp-drift-fixup    setserial
@@ -79,7 +79,7 @@ SD-Karte befinden soll,auf der das gesamte System zu finden ist. Das
 deckt sich auch mit dem Installer-Bash-Script, der eine SD Karte
 formatiert und in 3 Teile aufteilt.
 
-::
+ .. code-block :: bash
 
     nrblocks="$(sfdisk -s /dev/mmcblk0)"
 
@@ -102,7 +102,7 @@ viel auf, dass ssh-delayed als service selten aufgerufen wird. Es gibt
 aber einen Fall, und zwar gibt es in einer Maintenance Klasse des
 Frontends 2 Methoden:
 
-::
+ .. code-block :: php
 
         function checkSSH () {
             exec('/etc/init.d/ssh-delayed status', $dummy, $ret);
@@ -131,7 +131,7 @@ verschluesselt besitzen, noch besitzen wir den Private-Key zu dem
 eingetragenen Public-key des Supports. Wer sich berufen fuehlt, hier ist
 mal das RootPasswort. Es ist ein FreeBSD md5 Hash:
 
-::
+ .. code-block :: bash
 
     root:$1$U4.8u2Dh$UvJpU6AsN912qFZGBvUtN/:0:0:root:/root:/bin/bash
 
@@ -140,7 +140,7 @@ das ueberschreibt sich bei einem Update wieder. Es gibt aber ein
 Verzeichnis, das bleibt...und da werden ssh-keys eingetragen, was uns
 die ganze Sache natuerlich erleichtert:
 
-::
+ .. code-block :: bash
 
     root@spx-hmp-idderbox:/usr/share/resources/default/ssh# ls
     root-authorized_keys
@@ -171,12 +171,12 @@ auf den Rechnern/Servern von Spinetix, demnach unerreichbar. so long
 .. _spinetix hmp130: http://www.spinetix.com/hmp130/specifications
 
 .. |image0| image:: http://images.hoeja.de/blog/2012-09-13-144408_403x263_scrot.png
-.. |image1| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4089-300x199.jpg
-.. |image2| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4091-300x199.jpg
-.. |image3| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-191423_585x183_scrot-300x93.png
-.. |image4| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-164035_1024x768_scrot-300x208.png
-.. |image5| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-192947_432x284_scrot-300x197.png
-.. |image6| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4089-300x199.jpg
-.. |image7| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/DSC_4091-300x199.jpg
-.. |image8| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-191423_585x183_scrot-300x93.png
-.. |image9| image:: http://nuit.homeunix.net/blag/wp-content/uploads/2012/04/2012-04-04-164035_1024x768_scrot-300x208.png
+.. |image1| image:: http://images.hoeja.de/blog/DSC_4089-300x199.jpg
+.. |image2| image:: http://images.hoeja.de/blog/DSC_4091-300x199.jpg
+.. |image3| image:: http://images.hoeja.de/blog/2012-04-04-191423_585x183_scrot-300x93.png
+.. |image4| image:: http://images.hoeja.de/blog/2012-04-04-164035_1024x768_scrot-300x208.png
+.. |image5| image:: http://images.hoeja.de/blog/2012-04-04-192947_432x284_scrot-300x197.png
+.. |image6| image:: http://images.hoeja.de/blog/DSC_4089-300x199.jpg
+.. |image7| image:: http://images.hoeja.de/blog/DSC_4091-300x199.jpg
+.. |image8| image:: http://images.hoeja.de/blog/2012-04-04-191423_585x183_scrot-300x93.png
+.. |image9| image:: http://images.hoeja.de/blog/2012-04-04-164035_1024x768_scrot-300x208.png
