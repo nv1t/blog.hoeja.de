@@ -41,4 +41,3 @@ SOCIAL = (('twitter', 'http://twitter.com/nv1t'),
 
 # static paths will be copied under the same name
 STATIC_PATHS = ["pictures",]
-    
