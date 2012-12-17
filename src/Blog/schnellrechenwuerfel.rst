@@ -1,9 +1,22 @@
-Wuerfel sie zu knechten...
-##########################
+Wuerfel, sie zu knechten...
+###########################
 :date: 2012-12-17 14:16
 :tags: bugs, de, exploits, javascript, reverse engineering
 
-...ins Dunkle zu treiben und ewig zu binden.
+
+.. container:: float-left
+
+    .. figure:: http://images.hoeja.de/blog/schnellrechenwuerfel.jpg
+        :height: 200px
+        :alt: Schnellrechenwuerfel
+
+...sie alle zu finden, ins Dunkel zu treiben und ewig zu binden!
+----------------------------------------------------------------
+
+.. container:: clear
+
+    .. figure:: http://images.hoeja.de/blog/1x1.png
+
 
 Jedes Jahr geh ich auf dem Weihnachtsmarkt an einen bestimmten Stand. Das Holzspielzeug ist
 phantastisch und die Raetsel sind klasse. Dieses Jahr hatte Sie nur Wuerfel, die man moeglichst
@@ -85,3 +98,6 @@ Aber um mal die Vorgehensweise zu erklaeren:
 Ich wuensche euch viel Spass mit diesem Mathematischen Spiel und Spass und Huepferei in Pfuetze.
 
 so long
+
+
+.. |wuerfel| image:: http://images.hoeja.de/blog/schnellrechenwuerfel.jpg
