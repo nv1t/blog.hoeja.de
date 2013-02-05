@@ -4,7 +4,7 @@
 AUTHOR = u"nuit"
 SITENAME = u"Eleventeen"
 #SITESUBTITLE = u""
-SITEURL = 'http://blog.hoeja.de'
+SITEURL = u'http://blog.hoeja.de'
 
 THEME = "bootstrap-mathified"
 
@@ -19,6 +19,8 @@ DEFAULT_CATEGORY = "blog"
 #PIWIK_URL = "piwik.hoeja.de"
 #PIWIK_SITE_ID = 2
 
+FEED_DOMAIN = SITEURL
+
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
@@ -30,7 +32,7 @@ DISPLAY_PAGES_ON_MENU=False
 
 # Blogroll
 LINKS =  (
-    #('mkzer0', 'http://.org'),
+    ('mkzer0', 'http://www.linux-web-development.de/'),
          )
 
 # Social widget
@@ -39,7 +41,7 @@ SOCIAL = (('twitter', 'http://twitter.com/nv1t'),
           #('pastebin','http://paste.hoeja.de'),
          )
 
-#TWITTER_USERNAME = 'nv1t'
+# TWITTER_USERNAME = 'nv1t'
 
 # static paths will be copied under the same name
 STATIC_PATHS = ["pictures",]
