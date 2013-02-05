@@ -3,8 +3,10 @@
 
 AUTHOR = u"nuit"
 SITENAME = u"Eleventeen"
-SITESUBTITLE = u"Because imaginary numbers can be real"
+#SITESUBTITLE = u""
 SITEURL = 'http://blog.hoeja.de'
+
+THEME = "bootstrap-mathified"
 
 #GITHUB_URL = 'http://github.com/nv1t/'
 #DISQUS_SITENAME = "eleventeen"
@@ -12,7 +14,7 @@ PDF_GENERATOR = False
 REVERSE_CATEGORY_ORDER = True
 LOCALE = ""
 DEFAULT_PAGINATION = 5
-DEFAULT_CATEGORY = "Blog"
+DEFAULT_CATEGORY = "blog"
 
 #PIWIK_URL = "piwik.hoeja.de"
 #PIWIK_SITE_ID = 2
@@ -34,7 +36,7 @@ LINKS =  (
 # Social widget
 SOCIAL = (('twitter', 'http://twitter.com/nv1t'),
           ('github','http://github.com/nv1t'),
-          ('pastebin','http://paste.hoeja.de'),
+          #('pastebin','http://paste.hoeja.de'),
          )
 
 #TWITTER_USERNAME = 'nv1t'
