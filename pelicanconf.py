@@ -6,7 +6,7 @@ SITENAME = u"Eleventeen"
 #SITESUBTITLE = u""
 SITEURL = u'http://blog.hoeja.de'
 
-THEME = "bootstrap-mathified"
+THEME = "/home/jan/development/github/makujaho/pelican-themes/bootstrap-mathified/"
 
 #GITHUB_URL = 'http://github.com/nv1t/'
 #DISQUS_SITENAME = "eleventeen"
@@ -32,7 +32,7 @@ DISPLAY_PAGES_ON_MENU=False
 
 # Blogroll
 LINKS =  (
-    ('mkzer0', 'http://www.linux-web-development.de/'),
+    ('mkzer0', 'http://blog.unikorn.me/'),
          )
 
 # Social widget
