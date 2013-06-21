@@ -1,0 +1,74 @@
+Debian PHP Session Handling
+###########################
+:date: 2013-06-20 12:57
+:tags: debian, php, session
+
+Nachdem ich heute ein wenig ueber Session Handling gestolpert bin, dachte ich
+mir, dass ich das mal zusammenschreib bevor ich da was vergessen.
+In der php.ini gibt es einen Wahrscheinlichkeitswert um den Garbage-Collector
+anzustossen: session.gc_probability
+
+Dieser Wert ist die Wahrscheinlichkeit ob der Garbage-Collector bei Aufruf eines
+Skriptes angestossen werden soll, oder nicht. Debian ist auf eine Prickelnde 
+Idee gekommen: "Wir packen die Session Dateien an einen Ort, wo sie nur root loeschen kann.
+Brauchst du ja auch nicht. Das macht dann ein Cronjob, den root ausfuehrt"
+
+ .. code-block :: plain
+
+    09,39 *     * * *     root   [ -x /usr/lib/php5/maxlifetime ] && [ -d /var/lib/php5 ] && find /var/lib/php5/ -type f -cmin +$(/usr/lib/php5/maxlifetime) -delete
+
+Wir haben also einen cronjob, der alle 30min von Root ausgefuehrt wird, der
+ein kleines Skript aufruft, welches die maxliftetime aus der php.ini Datei
+parsed und die Sessions purged *thumbs up*
+
+ .. code-block :: bash
+
+    #!/bin/sh -e
+
+    max=1440
+
+    if which php5 >/dev/null 2>&1 && [ -e /etc/php5/apache2/php.ini ]; then
+        cur=$(php5 -c /etc/php5/apache2/php.ini -d "error_reporting='E_ALL & ~E_DEPRECATED'" -r 'print ini_get("session.gc_maxlifetime");')
+        [ -z "$cur" ] && cur=0
+        [ "$cur" -gt "$max" ] && max=$cur
+    else
+        for ini in /etc/php5/*/php.ini; do
+            cur=$(sed -n -e 's/^[[:space:]]*session.gc_maxlifetime[[:space:]]*=[[:space:]]*\([0-9]\+\).*$/\1/p' $ini 2>/dev/null || true);
+            [ -z "$cur" ] && cur=0
+            [ "$cur" -gt "$max" ] && max=$cur
+        done
+    fi
+
+    echo $(($max/60))
+
+    exit 0
+
+Guys....srsly? 
+
+Das ganze ist uebrigens seit sarge/php4 so. (-> `Bug #256831 <http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=256831>`_)
+
+  .. code-block :: plain
+
+    for security reasons, session files are now stored in a directory that is
+    only readable by root, which means that PHP scripts running in either
+    the webserver security context (user www-data) or as a per-user CGI will
+    be unable to get a list of session files in the directory.  This is by
+    design, and will not be changed; what will be changed is to disable
+    PHP's internal session gc and replace it with a cronjob running as root
+    that can sweep the directory on our behalf.
+
+Das funktionert gut...es funktioniert solange gut, bis der Programmierer auf
+den unglaublichen Gedanken kommt sein eigenes Session Handling zu machen. (Wie kann er das nur wollen...)
+
+Wir erinnern uns: die eigentliche Variante fuer Garbage Collection ist, dies 
+dem Skriptaufruf zu ueberlassen. Da wird entschieden, wo er jetzt Dateien
+purgen muss. Da der PHP interne Garbage Collector aber ausgeschalten ist,
+geht dies nichtmehr wirklich so gut, besser gesagt: GARNICHT!
+
+Die Folge ist, dass sich viele Sessiondateien ansammeln, weil der Cronjob
+ja nur im Standardverzeichnis purged.
+
+Ich zeige euch nicht die Loesungsansaetze...ich glaube alle wuerden nur weinen.
+
+so long.
+
