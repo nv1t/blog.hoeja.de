@@ -33,6 +33,7 @@ DISPLAY_PAGES_ON_MENU=False
 # Blogroll
 LINKS =  (
     ('mkzer0', 'http://blog.unikorn.me/'),
+    ('bakerolls','http://w8l.org'),
          )
 
 # Social widget
