@@ -72,3 +72,7 @@ Ich zeige euch nicht die Loesungsansaetze...ich glaube alle wuerden nur weinen.
 
 so long.
 
+
+Nachtrag:
+Das ganze hat noch einen Nachteil: Dadurch, dass der Cron alle 30min ausgefuehrt
+wird sind die Sessions bis zu 30min gueltig. YEAH...Perfektes Handling.
