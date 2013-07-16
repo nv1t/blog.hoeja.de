@@ -1,0 +1,49 @@
+solr 4.3.1 mit tomcat 7
+#######################
+:date: 2013-07-16 14:28
+:tags: de, solr, tomcat, apache
+
+Ich habe heute den Tag verbracht diese beiden zum Laufen zu kriegen.
+Die Anleitungen sehen alle eigentlich recht simpel aus:
+
+ .. code-block :: bash
+    
+    aptitude install tomcat7 tomcat7-admin
+    wget http://mirrors.ibiblio.org/apache/lucene/solr/4.3.1/solr-4.3.1.tgz
+    tar xvfz solr-4.3.1.tgz
+    cd solr-4.3.1
+    cp dist/solr-4.3.1.war /var/lib/tomcat7/webapps/solr.war 
+    cp -fr example/solr /var/lib/tomcat7/
+    chown -R tomcat7:tomcat7 /var/lib/tomcat7/solr
+    /etc/init.d/tomcat7 restart
+
+Und baaaaem...wenn man auf http://localhost:8080/solr geht kommt ein 404.
+
+Das einzige was auf einen Fehler hinweist findet man in der Logdatei
+/var/log/tomcat7/catalina.out
+
+ .. code-block :: plain
+    
+    16.07.2013 13:10:46 org.apache.catalina.core.StandardContext startInternal SCHWERWIEGEND: Error filterStart
+
+Wenn man nach diesem Fehler googelt (natuerlich in Zusammenhang mit solr) stolpert
+man ueber einen Eintrag in der Lucene-Solr-User Mailingliste. Dies ist nicht
+verwunderlich, aber sie geben dort den Tipp, dass das Problem am neuen Logging
+von Solr 4.3 liegt.
+
+Also ist der naechste Anlaufpunkt `<http://wiki.apache.org/solr/SolrLogging>`_.
+
+Es stellt sich raus, dass die SLF4J JAR Files komplett fehlen. Wenn man sich die 2. Log-Datei anschaut, haette man es auch einfacher haben koennen :/
+
+ .. code-block :: plain
+    
+    org.apache.solr.common.SolrException: Could not find necessary SLF4j logging jars. If using Jetty, the SLF4j logging jars need to go in the jetty lib/ext directory. For other containers, the corresponding directory should be used. For more information, see: http://wiki.apache.org/solr/SolrLogging
+
+Die Loesung ist also die Dateien herzunehmen und in die WAR file zu packen 
+und diese WAR File neu zu bauen.
+
+Hierzu verweise ich frech auf den Logging-Link :)
+
+Draengt sich mir die Frage auf: "Ist Solr4.3 im aktuellen Build kaputt?"
+
+so long
