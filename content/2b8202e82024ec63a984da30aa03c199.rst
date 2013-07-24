@@ -1,0 +1,32 @@
+What the...Audible?
+###################
+:date: 2013-07-24 19:58
+:tags: de, audible, support
+
+Gestern schrieb mkzer0 einen Blogartikel ueber den Customer Support
+bei Audible und ich dachte mir: Schicken wir einfach mal eine aehnliche
+Mail hin und schauen uns die Antwort an.
+
+Wie soll es anders seien, hier ist die Antwort:
+
+ .. code-block :: plain
+
+    Hello Jan,
+
+    Thank you for contacting Audible. My name is Greg and I will be happy to answer your question today.
+
+    At this time, we are working with the open-source developers of Linux to see if we can make our file format compatible with their operating system. If that happens, we do expect to expand our support to Linux computers in the future. We would love to make our content available to Linux users as soon as possible, as we often hear from Linux fans regarding Audible playback.
+
+    Thank you for your patience and understanding in this matter and if I can do anything else for you, please don't hesitate to contact us. Please feel free to call our Customer Care at 1-888-283-5051 (USA & Canada), (US Country Code) 1-973-820-0400 (International) or simply reply to this email. We are here to help 24 hours a day, 7 days a week. Have a great day.
+
+    Sincerely,
+    Greg W. - Customer Service Representative
+
+    Audible Customer Support
+
+Schoen finde ich, dass sie bei dem Textbaustein wenigstens den Anfang ausgetauscht haben.
+Aber ich wurde unschoener abserviert als mkzer0.
+
+Wielange sie die Bausteine wohl aufrecht erhalten koennen? Wollen nicht alle mal hinschreiben und nach einem Linux Client fragen?
+
+so long.
