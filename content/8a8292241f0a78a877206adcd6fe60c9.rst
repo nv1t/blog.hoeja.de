@@ -1,0 +1,160 @@
+DDoS Mitigation
+###############
+:date: 2013-09-20 06:09
+:tags: de, ddos, abwehr, nginx
+
+Einer der zu betreuenden Server wurde in den letzten 2 Monaten von einer DDoS 
+geplagt. Nachdem am Anfang alles recht verhalten war bauten wir erst nach und nach 
+die Sicherheitsvorkehrungen auf. 
+
+Ich will hier ein wenig zusammenfassen, was passiert ist und wie wir darauf
+reagiert haben.
+
+
+Der Anfang
+==========
+Vor ca. 2 Monaten haben bei einem vhost die Service angefangen zu flappen und 
+nichtmehr stabil up zu sein. 
+
+Zu diesem Zeitpunkt troepfelten vielleicht 10-15 req/sec rein. Also nichts wirklich
+beunruhigendes. Die IPs machten im Schnitt 10 Requests und verschwanden dann 
+wieder in einen groesseren Cycle. Es gab ein paar wenige die es recht schnell
+auf hohe Zahlen kamen, doch vermuteten wir hier groessere Firewalls bzw. Proxies.
+
+An Blocken von Subnetzen oder gar einzelnen IPs ist in diesem Fall nicht zu denken,
+weil zuviele normale User getroffen werden wuerde. Diese Zugriffe hatten aber 
+eine Gemeinsamkeit: Sie machten alle einen Post Request auf /. Der POST Body waren
+ca. 300-500 Bytes. und Verbindungen wurden etwas laenger als gewoehnlich offen 
+gehalten. Ein typischer Layer 7 DDoS auf POST.
+
+Wir machten uns keine groesseren Gedanken und implementierten ModSecurity.
+
+ModSecurity
+===========
+
+ .. code-block :: plain
+
+    Open source, cross-platform, web server WAF module. Currently works with Apache, IIS7 and Nginx platforms.
+
+Wir richteten fuer alle POST Requests auf / einen Redirect auf ihren Localhost ein. 
+
+ .. code-block :: plain
+    
+    SecRule REQUEST_LINE "POST / " "phase:1,id:3007,log,redirect:http://127.0.0.1,t:none"
+
+Dieser Redirect ist aber ziemlich sinnlos, weil zuviele Daten uebertragen werden muessen.
+Man bedenke, dass der komplette Header gelesen wird und wir wieder einen 302er Header
+zurueckschicken
+
+ .. code-block :: plain
+
+    HTTP/1.1 302 Found
+    Date: Fri, 20 Sep 2013 12:49:08 GMT
+    Server: Apache
+    Location: http://127.0.0.1
+    Vary: Accept-Encoding
+    Content-Length: 200
+    Content-Type: text/html; charset=iso-8859-1
+
+Das ging eine Weile gut, bis aus den 15 req/sec ueber Nacht 50 req/sec wurden.
+Innerhalb kurzer Zeit sind wir von einem Redirect auf ein einfaches drop gekommen
+
+ .. code-block :: plain
+
+    SecRule REQUEST_LINE "POST / " "phase:1,id:3007,log,drop,t:none"
+
+Dies entspricht einem 444 und bricht die Verbindung einfach ab. Dies gehoert
+zwar nicht zum guten Ton, aber ein DDoS eben auch nicht.
+Um noch ein wenig mehr Performance zu tweaken schalteten wir spaeter noch Logging
+aus. 
+
+Dies lief mit 50 req/sec mehr oder weniger gut und es musste eine bessere Loesung her.
+
+
+DNS Umstellung und der Plan
+===========================
+Irgendwie muessen die ja wissen wo sie DoS'en muessen. Erste Ueberlegung war den
+DNS kurzfristig umzustellen und auf einen anderen Server zeigen zu lassen.
+Bloed nur, wenn die Anfrage direkt an die IP geht und einfach nur ein Host Header
+mitgeschickt wird.
+
+Ein Umzug der IP war die Loesung, um den eigentlich Webserver zu entlasten und nur den betroffenen vhost
+auszulagern.
+
+Idee war: Wir vergeben eine neue IP am alten Server, ziehen die alte IP auf einen neuen
+Server. Alles was dort aufschlaegt wird ueber ein nginx oder Haproxy weitergeleitet
+und schon vorgefiltert. Unter Umstaenden koennen wir die alte IP in die Tonne treten.
+
+Also auf der alten Kiste IPs so angepasst, dass ich nur switchen musste (secondary/primary ips) 
+und auf dem neuen Server nginx als Proxy eingerichtet mit entsprechenden Filterungen.
+
+ .. code-block :: plain
+
+    server {                                                                        
+        server_name xxx;                                                
+                                                                                
+        location / {                                                            
+                                                                                
+                set $pit 0;                                                     
+                                                                                
+                if ($request_method = POST) {                                   
+                        set $pit  A;                                            
+                }                                                               
+                if ($request_uri = /) {                                         
+                        set $pit "${pit}B";                                     
+                }                                                               
+                if ($pit = AB) {                                                
+                        return 444;                                             
+                }                                                               
+                                                                                
+                proxy_pass        http://ip;                         
+                proxy_redirect off;                                                             
+                proxy_set_header Host $host;                                                    
+                proxy_set_header X-Real-IP $remote_addr;                                        
+        }                                                                       
+    }  
+
+Wundert euch nicht ueber dieses seltsame If Konstrukt...nginx kann keine
+verschachtelten Ifs und das ist ein Workaround.
+Das ganze macht auch nichts anderes als die Verbindung zu droppen, wenn ein POST auf
+/ ankommt, nur, dass es nichtmehr vom Apache abgearbeitet werden muss.
+
+.. image :: http://images.hoeja.de/blog/2013-09-20-090652_1428x389_scrot.png
+    :width: 1024
+
+Um 12:30 hatten wir die IPs umgestellt und alles am laufen. Innerhalb kuerzester
+Zeit schnellten die Requests auf 100-110 req/sec hoch.
+
+Zeitweise (um 16-17 Uhr) sah ich alle 5sec um die 350 neue IPs.
+
+Alles laeuft aber fluessig und wir koennen es wieder abwehren. Nach wie vor
+gehen wir davon aus, dass es ein vergessenes Botnetz ist. Ueber 2 Monate so etwas
+aufrechterhalten finden wir sehr Schwachsinnig, vorallem ohne Meldung. Am naechsten Tag, als ich die
+Logs ueberpruefen wollte, sah ich, dass wir wieder auf 10 req/sec runter sind. (siehe Bild)
+Ich sehe zwar seltsame GET Anfrage, die durch den Proxy durchrutschen, aber nichts beunruhigendes.
+
+.. image :: http://images.hoeja.de/blog/2013-09-20-152910_842x266_scrot.png
+
+Das ist der Traffic von dem neuen Server. Man sieht, dass wir ca. 12 Uhr umgestellt haben und
+um ca 20 Uhr durch die GET Anfragen der Traffic explodiert, weil komplette Daten uebertragen werden.
+
+Die Vermutung liegt darin, dass gemerkt wurde (ob Bot oder nicht) ein nginx liefert aus
+und sie muessen die "Angriffsstrategie aendern". Deshalb Pipen wir den Server Header vom
+Apache mit durch.
+
+Es kuemmert uns derzeit aber nicht gross, denn die Seiten werden normal ausgeliefert. 
+Kurze Zeit spaeter stoppen auch diese Requests und es ist Still im Log, bis auf 
+kleinere Requests von normalen Benutzern und den einen oder anderen Staubballen, 
+der ueber den Boden rollt.
+
+Wir befuerchten schon, dass sie Ressourcen sammeln, aber bisher ist es still, fast schon zu still.
+
+Fazit
+===== 
+    * Ausser mehr Ressourcen hinzuschmeissen und Anfragen auf mehrere Clients zu verteilen ist nicht wirklich moeglich.
+    * Apache ist in der default conf gegen Layer 7 DDoS (slowloris, Post) anfaellig
+    * Services ala Cloudflare anschauen
+    * nginx ist cool!
+
+
+so long
