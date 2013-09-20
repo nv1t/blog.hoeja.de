@@ -27,6 +27,21 @@ eine Gemeinsamkeit: Sie machten alle einen Post Request auf /. Der POST Body war
 ca. 300-500 Bytes. und Verbindungen wurden etwas laenger als gewoehnlich offen 
 gehalten. Ein typischer Layer 7 DDoS auf POST.
 
+ .. code-block :: plain
+
+    POST / HTTP/1.1
+    Accept: */*
+    Accept-Language: en-us
+    Content-Type: application/octet-stream
+    Content-Length: 524
+    User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+    Host: schiedel.it
+    Cache-Control: no-cache
+    Connection: Keep-Alive
+
+
+    S9TRJm3g9Ks0SHU5ZMbucyZ/d69bsCz68W+z7+04KcVMkv0ClJfSqkMsQt0SE51dXpMoJ12mPEuAnj48d89uVpfq06HZ+cs7rf82cUqtRBzxsrn4wRVdRmRNRbQB9ru4cHn3Q81oUShuG7stMZc2TDzpvF7gA3+sIw6HUts6zwZzDIrfJ5ReYchr8gUfImcvgJOVL1hhQsC0wFcz0J1X2D+tReNh+FS5mStAaLn4K+V78n24OVaypbMJDE2YRB3qlL0GVwOefp7al3dA+ofI55oT5qTw8sg1XWpF/ITyzauC7kFQXoDu3JOmWQ83PbbdWwGGWlWiEsa6e3GXTq0QC1LcUrUqYP3TQngSQo8PEU03Bj2KgatrIDxCxQZdHSudVTer+9/ps7XzAfBFCE8wcOsthhsuUBMn9KyBj/5Park9De6ht9ug2vZkFMGA8tB8d9THoTIygaSjsFgU6LiBRCv4Rs11isk/Pz3xcGLKdWJLPaefHR7A3qK/HriwjQwFxGJjxZLqX7ex
+
 Wir machten uns keine groesseren Gedanken und implementierten ModSecurity.
 
 ModSecurity
